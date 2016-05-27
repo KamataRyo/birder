@@ -1,6 +1,6 @@
 === birder ===
 
-Contributors: automattic
+Contributors: KamataRyo
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0
@@ -14,6 +14,12 @@ A starter theme called birder, or underscores.
 == Description ==
 
 Hi. I'm a starter theme called birder, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+
+== filters ==
+
+'birder_get_post_taxonomies'
+@inc/template-tags.php
+accept taxonomies name as array, allow to alter taxonomies list shown behind post
 
 == Installation ==
 

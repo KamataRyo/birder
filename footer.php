@@ -19,7 +19,7 @@
 			<div class="site-info">
 				<p class="text-center">
 					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'birder' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'birder' ), 'WordPress' ); ?></a>
-				<br class="sep" />
+				<br class="sep">
 					<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'birder' ), 'birder', '<a href="https://biwako.io/" rel="designer">KamataRyo</a>' ); ?>
 				</p>
 			</div><!-- .site-info -->

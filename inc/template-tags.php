@@ -24,38 +24,90 @@ function birder_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'birder' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	$posted_on =
+		'<dt class="glyphicon glyphicon-calendar">' .
+			'<dl class="sr-only">' . __( 'posting date', 'birder' ) . '</dl>' .
+			'<dd>' . $time_string . '</dd>' .
+		'</dt>';
+
+	$byline =
+		'<dt class="glyphicon glyphicon-user">' .
+			'<dl class="sr-only">' . __( 'post author', 'birder' ) . '</dl>' .
+			'<dd class="author vcard">' .
+				'<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .
+					esc_html( get_the_author() ) .
+				'</a>' .
+			'</dd>' .
+		'</dt>';
+
+	echo "<span class=\"posted-on\">$posted_on</span><span class=\"byline\">$byline</span>"; // WPCS: XSS OK.
+
+	edit_post_link(
+		sprintf(
+			/* translators: %s: Name of current post */
+			esc_html__( 'Edit %s', 'birder' ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		),
+		'<span class="edit-link glyphicon glyphicon-wrench">',
+		'</span>'
 	);
-
-	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'birder' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
-
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
 }
 endif;
 
 if ( ! function_exists( 'birder_entry_footer' ) ) :
 /**
- * Prints HTML with meta information for the categories, tags and comments.
+ * Prints HTML with meta information for the categories, tags,
+ * other taxonomies by filter and comments.
  */
 function birder_entry_footer() {
-	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'birder' ) );
-		if ( $categories_list && birder_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'birder' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
 
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'birder' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'birder' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+		$tax_names = apply_filters(
+			'birder_get_post_taxonomies',
+			array( 'category', 'post_tag' )
+		);
+
+		foreach ( $tax_names as $tax_index => $tax_name ) {
+
+			$taxonomy = get_taxonomy( $tax_name );
+			$tax_label = $taxonomy->labels;
+			$terms = get_the_terms( get_the_ID(), $tax_name );
+			$class_attr = implode( ' ', array(
+				"$tax_name-list",
+				"$tax_name-list-position-" . ( $tax_index + 1 )
+			) );
+			$output = '<ul class="' . esc_attr( $class_attr ) . '">';
+
+			foreach ( $terms as $term_index => $term ) {
+
+				$term_id = $term->term_id;
+				$class_attr = implode( ' ', array(
+					$tax_name . '-item-' . $term_id,
+					$tax_name . '-item-position-' . ( $term_index + 1 ),
+				) );
+				$url_attr = get_term_link( $term_id, $tax_name );
+				$output .= sprintf(
+					'<li class="%1$s"><a href="%2$s">%3$s</a></li>',
+					esc_attr( $class_attr ),
+					esc_url( $url_attr ),
+					$term->name
+				);
+			}
+			$output .= '</ul>';
+
+			if ( 0 < count( $terms ) ) {
+				printf(
+					'<dt class="%1$s-links">' .
+						'<dl>%2$s</dl>' .
+						'<dd>%3$s<dd>' .
+					'</dt>',
+					$tax_name,
+					count( $terms ) > 1 ?
+						$tax_label->name :
+						$tax_label->singular_name,
+					$output
+				); // WPCS: XSS OK.
+			}
 		}
 	}
 
@@ -65,48 +117,8 @@ function birder_entry_footer() {
 		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'birder' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
-
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'birder' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
 }
 endif;
-
-/**
- * Returns true if a blog has more than 1 category.
- *
- * @return bool
- */
-function birder_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'birder_categories' ) ) ) {
-		// Create an array of all the categories that are attached to posts.
-		$all_the_cool_cats = get_categories( array(
-			'fields'     => 'ids',
-			'hide_empty' => 1,
-			// We only need to know if there is more than one category.
-			'number'     => 2,
-		) );
-
-		// Count the number of categories that are attached to the posts.
-		$all_the_cool_cats = count( $all_the_cool_cats );
-
-		set_transient( 'birder_categories', $all_the_cool_cats );
-	}
-
-	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so birder_categorized_blog should return true.
-		return true;
-	} else {
-		// This blog has only 1 category so birder_categorized_blog should return false.
-		return false;
-	}
-}
 
 /**
  * Flush out the transients used in birder_categorized_blog.

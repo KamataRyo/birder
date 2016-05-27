@@ -22,11 +22,11 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: 404.php:33
+#: 404.php:34
 msgid "Most Used Categories"
 msgstr ""
 
-#: 404.php:51
+#: 404.php:52
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
@@ -81,34 +81,20 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/template-tags.php:28
-msgctxt "post date"
-msgid "Posted on %s"
+#: inc/template-tags.php:29
+msgid "posting date"
 msgstr ""
 
-#: inc/template-tags.php:33
-msgctxt "post author"
-msgid "by %s"
+#: inc/template-tags.php:35
+msgid "post author"
 msgstr ""
 
-#: inc/template-tags.php:50, inc/template-tags.php:56
-msgid ", "
-msgstr ""
-
-#: inc/template-tags.php:52
-msgid "Posted in %1$s"
-msgstr ""
-
-#: inc/template-tags.php:58
-msgid "Tagged %1$s"
-msgstr ""
-
-#: inc/template-tags.php:65
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
-
-#: inc/template-tags.php:72, template-parts/content-page.php:33
+#: inc/template-tags.php:48, template-parts/content-page.php:33
 msgid "Edit %s"
+msgstr ""
+
+#: inc/template-tags.php:117
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #: search.php:19
