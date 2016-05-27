@@ -53,15 +53,15 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:18
+#: footer.php:21
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:18
+#: footer.php:21
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:20
+#: footer.php:23
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -81,7 +81,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:45
+#: header.php:46
 msgid "Primary Menu"
 msgstr ""
 
