@@ -61,11 +61,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:23
+#: footer.php:21
 msgid "Proudly powered by %s."
 msgstr ""
 
-#: footer.php:30
+#: footer.php:28
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -74,7 +74,7 @@ msgid "Menu"
 msgstr ""
 
 #: functions.php:102
-msgid "Sidebar"
+msgid "footer area"
 msgstr ""
 
 #: functions.php:104
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:117
+#: inc/template-tags.php:119
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 

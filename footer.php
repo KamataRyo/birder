@@ -10,30 +10,29 @@
  */
 
 ?>
+		</div><!-- .row -->
+		<div class="row">
 
-		</div><!-- #content -->
-	</div><!-- .container -->
-
-	<div class="container">
-		<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class="site-info">
-				<p class="text-center">
-					<?php
-						printf(
-							esc_html__( 'Proudly powered by %s.', 'birder' ),
-							'<a href="https://wordpress.org/">WordPress</a>'
-						);
-					?>
-				<br class="sep">
-					<?php
-						printf(
-							esc_html__( 'Theme: %1$s by %2$s.', 'birder' ),
-							'<a href="https://github.com/KamataRyo/birder">birder</a>',
-							'<a href="https://biwako.io/" rel="designer">KamataRyo</a>'
-						); ?>
-				</p>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
+			<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info">
+					<p class="text-center">
+						<?php
+							printf(
+								esc_html__( 'Proudly powered by %s.', 'birder' ),
+								'<a href="https://wordpress.org/">WordPress</a>'
+							);
+						?>
+					<br class="sep">
+						<?php
+							printf(
+								esc_html__( 'Theme: %1$s by %2$s.', 'birder' ),
+								'<a href="https://github.com/KamataRyo/birder">birder</a>',
+								'<a href="https://biwako.io/" rel="designer">KamataRyo</a>'
+							); ?>
+					</p>
+				</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+		</div><!-- .row -->
 	</div><!-- .container -->
 
 </div><!-- #page -->

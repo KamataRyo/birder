@@ -57,5 +57,6 @@
     	</header><!-- #masthead -->
     </div><!-- .container -->
 
-	<div class="container">
-		<div id="content" class="site-content">
+	<div id="content" class="site-content container">
+		<div class="row">
+			<div id="content-grid" class="col-xs-12">

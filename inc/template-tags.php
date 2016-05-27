@@ -67,6 +67,7 @@ function birder_entry_footer() {
 			array( 'category', 'post_tag' )
 		);
 
+		// generate ul for each taxonomy
 		foreach ( $tax_names as $tax_index => $tax_name ) {
 
 			$taxonomy = get_taxonomy( $tax_name );
@@ -78,6 +79,7 @@ function birder_entry_footer() {
 			) );
 			$output = '<ul class="' . esc_attr( $class_attr ) . '">';
 
+			// generate li for each terms
 			foreach ( $terms as $term_index => $term ) {
 
 				$term_id = $term->term_id;
