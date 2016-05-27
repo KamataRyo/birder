@@ -30,6 +30,14 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
+#: archive.php:39, index.php:44
+msgid "Older posts"
+msgstr ""
+
+#: archive.php:40, index.php:45
+msgid "Newer posts"
+msgstr ""
+
 #: comments.php:31
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -53,15 +61,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:21
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: footer.php:21
-msgid "Proudly powered by %s"
-msgstr ""
-
 #: footer.php:23
+msgid "Proudly powered by %s."
+msgstr ""
+
+#: footer.php:30
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 

@@ -35,7 +35,10 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			the_post_navigation( array(
+				'prev_text' => '<span class="glyphicon glyphicon-chevron-left"></span>' . __( 'Older posts', 'birder' ),
+				'next_text' => __( 'Newer posts', 'birder' ) . '<span class="glyphicon glyphicon-chevron-right"></span>'
+			) );
 
 		else :
 
