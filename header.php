@@ -34,6 +34,7 @@
                         'theme_location' => 'header',
                         'menu_id' => 'header-menu',
                         'menu_class' => 'nav navbar-nav navbar-right',
+						'depth' => 2,
                     ) );
                 ?>
     		</nav><!-- #site-navigation -->

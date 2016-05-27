@@ -13,6 +13,17 @@
 		</div><!-- .row -->
 		<div class="row">
 
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'footer',
+					'menu_id' => 'footer-menu',
+					'menu_class' => 'nav navbar-nav footer-nav_birder',
+					'depth' => 1,
+				) );
+			?>
+		</div><!-- .row -->
+
+		<div class="row">
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
 					<p class="text-center">
