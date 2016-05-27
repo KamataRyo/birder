@@ -131,10 +131,10 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:22, template-parts/content.php:38
+#: template-parts/content-page.php:22, template-parts/content.php:51
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content.php:33
+#: template-parts/content.php:46
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
