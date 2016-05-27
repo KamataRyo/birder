@@ -6,6 +6,8 @@ node_modules/
 .DS_Store
 .sass-cache/
 
+languages/*.pot
+
 js/lib
 !js/customizer.js
 !js/navigation.js
