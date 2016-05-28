@@ -61,11 +61,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:34
+#: footer.php:57
 msgid "Proudly powered by %s."
 msgstr ""
 
-#: footer.php:41
+#: footer.php:64
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -74,18 +74,26 @@ msgid "Menu"
 msgstr ""
 
 #: functions.php:48
-msgid "SNS"
-msgstr ""
-
-#: functions.php:49
 msgid "Sub menu"
 msgstr ""
 
-#: functions.php:104
-msgid "footer area"
+#: functions.php:49
+msgid "SNS list on header"
+msgstr ""
+
+#: functions.php:50
+msgid "SNS list on profile section"
+msgstr ""
+
+#: functions.php:51
+msgid "SNS list on footer"
 msgstr ""
 
 #: functions.php:106
+msgid "footer area"
+msgstr ""
+
+#: functions.php:108
 msgid "Add widgets here."
 msgstr ""
 
@@ -93,11 +101,45 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
+#: inc/customizer.php:28
+msgid "Privacy Settings"
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "- No Display -"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Representative at footer"
+msgstr ""
+
+#: inc/customizer.php:47
+msgid "This term determines whose profile to display on footer as representative. You may also need to update menus and to alter the SNS links for new one."
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "Display post's author"
+msgstr ""
+
+#: inc/customizer.php:63
+msgid "This term determines whether display authors name on post header or not."
+msgstr ""
+
+#: inc/customizer.php:68
+msgctxt "whether display author name on post or not"
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:69
+msgctxt "whether display author name on post or not"
+msgid "No"
+msgstr ""
+
 #: inc/template-tags.php:29
 msgid "posting date"
 msgstr ""
 
-#: inc/template-tags.php:35
+#: inc/template-tags.php:36
 msgid "post author"
 msgstr ""
 
@@ -107,6 +149,10 @@ msgstr ""
 
 #: inc/template-tags.php:119
 msgid "Leave a Comment<span class=\"sr-only\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:133
+msgid "Profile"
 msgstr ""
 
 #: search.php:19
@@ -135,8 +181,4 @@ msgstr ""
 
 #: template-parts/content.php:46
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: template-parts/profile.php:13
-msgid "Profile"
 msgstr ""

@@ -105,16 +105,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 // example to show only SNS icons
 .SNS-list_birder {
 	a:before {
-		content:'[l]';// being replace to icon font
+		content:'?';// being replace to icon font
 	}
 	a[href*="facebook.com"]:before {
-		content:'[f]';// being replace to icon font
+		content:'[facebook]';// being replace to icon font
 	}
 	a[href*="github.com"]:before {
-		content:'[g]';// being replace to icon font
+		content:'[github]';// being replace to icon font
 	}
 	a[href*="instagram.com"]:before {
-		content:'[i]';// being replace to icon font
+		content:'[instagram]';// being replace to icon font
 	}
 }
 

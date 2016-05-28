@@ -24,23 +24,23 @@ function birder_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on =
-		'<dt class="glyphicon glyphicon-calendar">' .
+	// display posted-on on post
+	echo '<span class="posted-on"><dt class="glyphicon glyphicon-calendar">' .
 			'<dl class="sr-only">' . __( 'posting date', 'birder' ) . '</dl>' .
 			'<dd>' . $time_string . '</dd>' .
-		'</dt>';
+		'</dt></span>';
 
-	$byline =
-		'<dt class="glyphicon glyphicon-user">' .
+	// display author name on post
+	if ( get_theme_mod( 'display_author_on_posts' ) ) {
+		echo '<span class="byline"><dt class="glyphicon glyphicon-user">' .
 			'<dl class="sr-only">' . __( 'post author', 'birder' ) . '</dl>' .
 			'<dd class="author vcard">' .
 				'<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .
 					esc_html( get_the_author() ) .
 				'</a>' .
 			'</dd>' .
-		'</dt>';
-
-	echo "<span class=\"posted-on\">$posted_on</span><span class=\"byline\">$byline</span>"; // WPCS: XSS OK.
+		'</dt></span>';
+	}
 
 	edit_post_link(
 		sprintf(
@@ -119,6 +119,40 @@ function birder_entry_footer() {
 		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="sr-only"> on %s</span>', 'birder' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
+}
+endif;
+
+
+if ( ! function_exists( 'birder_representative_profile' ) ) :
+/**
+ * Print representative's profile
+ */
+function birder_representative_profile( $id ) {
+	?>
+	<aside>
+	    <h2 class="text-center"><?php echo __('Profile', 'birder'); ?></h2>
+	    <p class="text-center"><?php echo get_avatar( $id ); ?><p>
+	    <p class="text-center">
+	        <a href="<?php echo get_author_posts_url( $id ); ?>">
+	            <?php the_author_meta( 'user_nicename', $id ); ?>
+	        </a>
+	    </p>
+	    <p class="text-center">
+	        <?php
+	            wp_nav_menu( array(
+	                'theme_location' => 'SNS_on_profile',
+	                'menu_id'         => 'SNS-list',
+	                'container_class' => 'menu-sns-container text-center',
+	                'menu_class'      => 'SNS-list SNS-list_birder list-inline',
+	                'depth'           => 1,
+	                'link_before'     => '<span class="sr-only">',
+					'link_after'      => '</span>',
+	            ) );
+	        ?>
+	    </p>
+	    <p><?php the_author_meta( 'description', $id ); ?><p>
+	</aside>
+	<?php
 }
 endif;
 

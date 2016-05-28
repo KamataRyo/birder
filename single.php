@@ -33,10 +33,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary.col -->
 
-	<div id="author-profile" class="col-xs-12">
-		<?php get_template_part( 'template-parts/profile' ); ?>
-	</div>
-
 <?php
 get_sidebar();
 get_footer();
