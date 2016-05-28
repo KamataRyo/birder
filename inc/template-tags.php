@@ -134,22 +134,26 @@ function birder_representative_profile( $id ) {
 	    <p class="text-center"><?php echo get_avatar( $id ); ?><p>
 	    <p class="text-center">
 	        <a href="<?php echo get_author_posts_url( $id ); ?>">
-	            <?php the_author_meta( 'user_nicename', $id ); ?>
+	            <?php the_author_meta( 'display_name', $id ); ?>
 	        </a>
 	    </p>
-	    <p class="text-center">
-	        <?php
-	            wp_nav_menu( array(
-	                'theme_location' => 'SNS_on_profile',
-	                'menu_id'         => 'SNS-list',
-	                'container_class' => 'menu-sns-container text-center',
-	                'menu_class'      => 'SNS-list SNS-list_birder list-inline',
-	                'depth'           => 1,
-	                'link_before'     => '<span class="sr-only">',
-					'link_after'      => '</span>',
-	            ) );
-	        ?>
-	    </p>
+
+		<?php if ( has_nav_menu( 'SNS_on_profile' ) ) : ?>
+		    <nav id="SNS-linklist-profile" class="SNS-linklist SNS-linklist_profile text-center">
+		        <?php
+		            wp_nav_menu( array(
+		                'theme_location' => 'SNS_on_profile',
+		                'menu_id'         => 'SNS-list',
+		                'container_class' => 'menu-sns-container text-center',
+		                'menu_class'      => 'SNS-list SNS-list_birder list-inline',
+		                'depth'           => 1,
+		                'link_before'     => '<span class="sr-only">',
+						'link_after'      => '</span>',
+		            ) );
+		        ?>
+		    </nav>
+		<?php endif; ?>
+
 	    <p><?php the_author_meta( 'description', $id ); ?><p>
 	</aside>
 	<?php

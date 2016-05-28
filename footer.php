@@ -19,6 +19,7 @@ $representative_id = (int)get_theme_mod( 'display_profile_at_footer' );
 				</div>
 			<?php endif; ?>
 
+			<?php if ( has_nav_menu( 'footer' ) ) : ?>
 			<div class="row">
 				<nav id="footer-navigation" class="sub-navigation">
 					<?php
@@ -31,22 +32,25 @@ $representative_id = (int)get_theme_mod( 'display_profile_at_footer' );
 					?>
 				</nav>
 			</div><!-- .row -->
+			<?php endif; ?>
 
-			<div class="row">
-				<nav id="footer-navigation" class="sub-navigation">
-					<?php
-						wp_nav_menu( array(
-							'theme_location'  => 'SNS_on_footer',
-							'menu_id'         => 'SNS-list',
-							'container_class' => 'menu-sns-container text-center',
-							'menu_class'      => 'SNS-list SNS-list_birder list-inline',
-							'depth'           => 1,
-							'link_before'     => '<span class="sr-only">',
-							'link_after'      => '</span>',
-						) );
-					?>
-				</nav>
-			</div><!-- .row -->
+			<?php if ( has_nav_menu( 'SNS_on_footer' ) ) : ?>
+				<div class="row">
+					<nav id="SNS-linklist-footer" class="SNS-linklist SNS-linklist_footer text-center">
+						<?php
+							wp_nav_menu( array(
+								'theme_location'  => 'SNS_on_footer',
+								'menu_id'         => 'SNS-list',
+								'container_class' => 'menu-sns-container text-center',
+								'menu_class'      => 'SNS-list SNS-list_birder list-inline',
+								'depth'           => 1,
+								'link_before'     => '<span class="sr-only">',
+								'link_after'      => '</span>',
+							) );
+						?>
+					</nav>
+				</div><!-- .row -->
+			<?php endif; ?>
 
 			<div class="row">
 				<footer id="colophon" class="site-footer" role="contentinfo">

@@ -26,20 +26,21 @@
 
     <div class="container">
 		<div class="row">
-
 	    	<header id="masthead" class="site-header" role="banner">
 
-	            <nav id="site-navigation" class="main-navigation">
-	    			<button class="menu-toggle" aria-controls="header-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'birder' ); ?></button>
-	                <?php
-	                    wp_nav_menu( array(
-	                        'theme_location' => 'header',
-	                        'menu_id' => 'header-menu',
-	                        'menu_class' => 'nav navbar-nav navbar-right',
-							'depth' => 2,
-	                    ) );
-	                ?>
-	    		</nav><!-- #site-navigation -->
+				<?php if ( has_nav_menu( 'header' ) ) : ?>
+		            <nav id="site-navigation" class="main-navigation">
+		    			<button class="menu-toggle" aria-controls="header-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'birder' ); ?></button>
+		                <?php
+		                    wp_nav_menu( array(
+		                        'theme_location' => 'header',
+		                        'menu_id' => 'header-menu',
+		                        'menu_class' => 'nav navbar-nav navbar-right',
+								'depth' => 2,
+		                    ) );
+		                ?>
+		    		</nav><!-- #site-navigation -->
+				<?php endif; ?>
 
 	    		<div class="site-branding">
 	    			<?php

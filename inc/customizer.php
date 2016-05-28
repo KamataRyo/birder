@@ -31,11 +31,11 @@ function birder_customize_register_general( $wp_customize ) {
 	);
 
 
-	$users = get_users( array( 'fields' => array( 'ID', 'user_nicename' ) ) );
+	$users = get_users( array( 'fields' => array( 'ID', 'display_name' ) ) );
 	$default = $users[0]->ID;
 	$choices = array( -1 => __('- No Display -', 'birder' ) );
 	foreach ( $users as $user ) {
-		$choices[$user->ID] = $user->user_nicename;
+		$choices[$user->ID] = $user->display_name;
 	}
 	$wp_customize->add_setting( 'display_profile_at_footer', array( 'default' => $default ) );
 	$wp_customize->add_control(

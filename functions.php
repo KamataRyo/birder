@@ -44,11 +44,10 @@ function birder_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'header' => __( 'Menu', 'birder' ),
-		'footer' => __( 'Sub menu', 'birder' ),
-		'SNS_on_header'  => __( 'SNS list on header', 'birder' ),
+		'header' => __( 'Main menu on header', 'birder' ),
+		'footer' => __( 'Sub menu on footer', 'birder' ),
 		'SNS_on_profile' => __( 'SNS list on profile section', 'birder' ),
-		'SNS_on_footer'  => __( 'SNS list on footer', 'birder' ),
+		'SNS_on_footer'  => __( 'SNS list on footer section', 'birder' ),
 	) );
 
 	/*
