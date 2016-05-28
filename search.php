@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<div id="primary" class="content-area col-xs-12">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -41,7 +41,7 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- #primary.col -->
 
 <?php
 get_sidebar();

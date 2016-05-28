@@ -61,15 +61,15 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:32
+#: footer.php:34
 msgid "Proudly powered by %s."
 msgstr ""
 
-#: footer.php:39
+#: footer.php:41
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:47, header.php:31
+#: functions.php:47, header.php:33
 msgid "Menu"
 msgstr ""
 

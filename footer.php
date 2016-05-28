@@ -10,17 +10,19 @@
  */
 
 ?>
-		</div><!-- .row -->
-		<div class="row">
+		</div><!--#content.row-->
 
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'footer',
-					'menu_id' => 'footer-menu',
-					'menu_class' => 'nav navbar-nav footer-nav_birder',
-					'depth' => 1,
-				) );
-			?>
+		<div class="row">
+			<nav id="footer-navigation" class="sub-navigation">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'footer',
+						'menu_id' => 'footer-menu',
+						'menu_class' => 'nav navbar-nav footer-nav_birder',
+						'depth' => 1,
+					) );
+				?>
+			</nav>
 		</div><!-- .row -->
 
 		<div class="row">
@@ -44,6 +46,7 @@
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- .row -->
+
 	</div><!-- .container -->
 
 </div><!-- #page -->
