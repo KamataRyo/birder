@@ -74,14 +74,18 @@ msgid "Menu"
 msgstr ""
 
 #: functions.php:48
+msgid "SNS"
+msgstr ""
+
+#: functions.php:49
 msgid "Sub menu"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:104
 msgid "footer area"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:106
 msgid "Add widgets here."
 msgstr ""
 
@@ -102,7 +106,7 @@ msgid "Edit %s"
 msgstr ""
 
 #: inc/template-tags.php:119
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgid "Leave a Comment<span class=\"sr-only\"> on %s</span>"
 msgstr ""
 
 #: search.php:19
@@ -131,4 +135,8 @@ msgstr ""
 
 #: template-parts/content.php:46
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/profile.php:13
+msgid "Profile"
 msgstr ""

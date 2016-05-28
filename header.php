@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'birder' ); ?></a>
+	<a class="skip-link sr-only" href="#main"><?php esc_html_e( 'Skip to content', 'birder' ); ?></a>
 
     <div class="container">
 		<div class="row">

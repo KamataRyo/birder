@@ -8,7 +8,7 @@
  */
 ?>
 
-		<div id="secondary" class="col-xs-12">
+		<div id="sidebar" class="col-xs-12">
 			<?php
 			if ( is_active_sidebar( 'footer_area-1' ) ) {
 				?>
@@ -18,4 +18,4 @@
 				<?php
 			}
 			?>
-		</div><!--#secondary.row-->
+		</div><!--#sidebar.row-->
