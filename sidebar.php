@@ -7,13 +7,13 @@
  * @package birder
  */
 ?>
-
-		<div id="sidebar" class="col-xs-12">
+		<a id="sidebar-toggle" role="button" data-toggle="collapse" href="#sidebar" aria-expanded="false" aria-controls="sidebar">toggle sidebar area</a>
+			<div id="sidebar" class="collapse">
 			<?php
-			if ( is_active_sidebar( 'footer_area-1' ) ) {
+			if ( is_active_sidebar( 'sidebar-1' ) ) {
 				?>
 				<aside id="secondary" class="widget-area" role="complementary">
-					<?php dynamic_sidebar( 'footer_area-1' ); ?>
+					<?php dynamic_sidebar( 'sidebar-1' ); ?>
 				</aside><!-- #secondary -->
 				<?php
 			}

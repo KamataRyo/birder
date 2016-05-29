@@ -86,7 +86,7 @@ msgid "SNS list on footer section"
 msgstr ""
 
 #: functions.php:105
-msgid "footer area"
+msgid "Footer Widget Area"
 msgstr ""
 
 #: functions.php:107
