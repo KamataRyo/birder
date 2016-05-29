@@ -8,6 +8,8 @@ node_modules/
 
 languages/*.pot
 
+vender
+
 js/lib
 !js/customizer.js
 !js/navigation.js

@@ -26,7 +26,7 @@ $representative_id = (int)get_theme_mod( 'display_profile_at_footer' );
 						wp_nav_menu( array(
 							'theme_location' => 'footer',
 							'menu_id'        => 'footer-menu',
-							'menu_class'     => 'nav navbar-nav footer-nav_birder',
+							'menu_class'     => 'footer-nav footer-nav_birder list-inline',
 							'depth'          => 1,
 						) );
 					?>

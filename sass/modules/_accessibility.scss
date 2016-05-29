@@ -1,4 +1,8 @@
-/* Text meant only for screen readers. */
+/**
+ * Text meant only for screen readers.
+ * This duplicates with .sr-only on Bootstrap, but WordPress core exports
+ * .screen-reader-text, so this must be remained.
+ */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;

@@ -4,7 +4,7 @@
   "description": "WordPress theme for birders.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "coffee setup/install.coffee"
+    "postinstall": "git clone git@github.com:twittem/wp-bootstrap-navwalker.git ./vender/twittem/wp_bootstrap_navwalker"
   },
   "repository": {
     "type": "git",

@@ -7,8 +7,8 @@
  * @package birder
  */
 ?>
-		<a id="sidebar-toggle" role="button" data-toggle="collapse" href="#sidebar" aria-expanded="false" aria-controls="sidebar">toggle sidebar area</a>
-			<div id="sidebar" class="collapse">
+		<a id="sidebar-toggle" href="javascript:alert('dosomething');" data-target="#sidebar"><span class="">toggle</span></a>
+			<div id="sidebar" class="collapse in">
 			<?php
 			if ( is_active_sidebar( 'sidebar-1' ) ) {
 				?>

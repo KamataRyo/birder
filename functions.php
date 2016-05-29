@@ -7,6 +7,11 @@
  * @package birder
  */
 
+/**
+ * custom waler to apply nav_menu to Bootstrap
+ */
+require_once get_template_directory() . '/vender/twittem/wp_bootstrap_navwalker/wp_bootstrap_navwalker.php';
+
 if ( ! function_exists( 'birder_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -102,7 +107,7 @@ add_action( 'after_setup_theme', 'birder_content_width', 0 );
  */
 function birder_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget Area', 'birder' ),
+		'name'          => esc_html__( 'Widget Area', 'birder' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'birder' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -117,13 +122,11 @@ add_action( 'widgets_init', 'birder_widgets_init' );
  * Enqueue scripts and styles.
  */
 function birder_scripts() {
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/js/lib/Honoka/dist/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/js/lib/bootstrap/dist/css/bootstrap.min.css' );
 
-	wp_enqueue_script( 'bootstrap.js', get_template_directory_uri() . '/js/lib/Honoka/dist/js/bootstrap.min.js', array(), '', true );
+	wp_enqueue_script( 'bootstrap.js', get_template_directory_uri() . '/js/lib/bootstrap/dist/js/bootstrap.min.js', array(), '', true );
 
 	wp_enqueue_style( 'birder-style', get_stylesheet_uri(), array( 'bootstrap' ) );
-
-	wp_enqueue_script( 'birder-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
 
 	wp_enqueue_script( 'birder-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 

@@ -69,27 +69,27 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:47
+#: functions.php:52
 msgid "Main menu on header"
 msgstr ""
 
-#: functions.php:48
+#: functions.php:53
 msgid "Sub menu on footer"
 msgstr ""
 
-#: functions.php:49
+#: functions.php:54
 msgid "SNS list on profile section"
 msgstr ""
 
-#: functions.php:50
+#: functions.php:55
 msgid "SNS list on footer section"
 msgstr ""
 
-#: functions.php:105
-msgid "Footer Widget Area"
+#: functions.php:110
+msgid "Widget Area"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:112
 msgid "Add widgets here."
 msgstr ""
 
@@ -97,8 +97,8 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:33
-msgid "Menu"
+#: header.php:37
+msgid "Toggle menu"
 msgstr ""
 
 #: inc/customizer.php:28
