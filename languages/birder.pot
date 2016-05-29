@@ -22,19 +22,17 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: 404.php:34
-msgid "Most Used Categories"
-msgstr ""
+#: archive.php:22
+msgid "%d post"
+msgid_plural "%d posts"
+msgstr[0] ""
+msgstr[1] ""
 
-#: 404.php:52
-msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
-#: archive.php:39, index.php:44
+#: archive.php:44, index.php:44, search.php:36
 msgid "Older posts"
 msgstr ""
 
-#: archive.php:40, index.php:45
+#: archive.php:45, index.php:45, search.php:37
 msgid "Newer posts"
 msgstr ""
 

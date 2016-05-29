@@ -56,7 +56,6 @@
 				</div><!--.row-->
 			<?php endif; ?>
 
-
 			<div class="site-branding row">
 				<?php
 				if ( is_front_page() && is_home() ) : ?>
