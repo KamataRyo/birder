@@ -59,11 +59,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:61
+#: footer.php:59
 msgid "Proudly powered by %s."
 msgstr ""
 
-#: footer.php:68
+#: footer.php:66
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -91,12 +91,16 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:25
+#: header.php:24
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:37
+#: header.php:36
 msgid "Toggle menu"
+msgstr ""
+
+#: header.php:48
+msgid "Serach"
 msgstr ""
 
 #: inc/customizer.php:28
@@ -145,11 +149,11 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:119
+#: inc/template-tags.php:121
 msgid "Leave a Comment<span class=\"sr-only\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:133
+#: inc/template-tags.php:135
 msgid "Profile"
 msgstr ""
 

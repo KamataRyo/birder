@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-xs-12">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -22,7 +22,7 @@ get_header(); ?>
 						_n( '%d post', '%d posts', $post_num, 'birder' ),
 						$wp_query->found_posts
 					);
-					the_archive_title( '<h1 class="page-title">', '<span class="archived-posts-num">' . $post_num_text . '</small></h1>' );
+					the_archive_title( '<h1 class="page-title text-center">', '<span class="archived-posts-num">' . $post_num_text . '</small></h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
@@ -52,7 +52,7 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary.col -->
+	</div><!-- #primary -->
 
 <?php
 get_sidebar();

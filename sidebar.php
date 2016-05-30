@@ -7,15 +7,10 @@
  * @package birder
  */
 ?>
-		<a id="sidebar-toggle" href="javascript:alert('dosomething');" data-target="#sidebar"><span class="">toggle</span></a>
-			<div id="sidebar" class="collapse in">
-			<?php
-			if ( is_active_sidebar( 'sidebar-1' ) ) {
-				?>
-				<aside id="secondary" class="widget-area" role="complementary">
-					<?php dynamic_sidebar( 'sidebar-1' ); ?>
-				</aside><!-- #secondary -->
-				<?php
-			}
-			?>
-		</div><!--#sidebar.row-->
+	<div id="sidebar" class="sidebar-area">
+		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+			<aside id="secondary" class="widget-area" role="complementary">
+				<?php dynamic_sidebar( 'sidebar-1' ); ?>
+			</aside><!-- #secondary -->
+		<?php endif; ?>
+	</div><!--#sidebar-->

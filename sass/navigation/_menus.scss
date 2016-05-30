@@ -1,96 +1,63 @@
-/**
- * deligating bootStrap
- */
+/*overwrite Bootstrap*/
 .main-navigation {
-	// clear: both;
-	// display: block;
-	// float: left;
-	// width: 100%;
-	//
-	// ul {
-	// 	display: none;
-	// 	list-style: none;
-	// 	margin: 0;
-	// 	padding-left: 0;
-	//
-	// 	ul {
-	// 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	// 		float: left;
-	// 		position: absolute;
-	// 		top: 1.5em;
-	// 		left: -999em;
-	// 		z-index: 99999;
-	//
-	// 		ul {
-	// 			left: -999em;
-	// 			top: 0;
-	// 		}
-	//
-	// 		li {
-	// 			&:hover > ul,
-	// 			&.focus > ul {
-	// 				left: 100%;
-	// 			}
-	// 		}
-	//
-	// 		a {
-	// 			width: 200px;
-	// 		}
-	//
-	// 		:hover > a,
-	// 		.focus > a {
-	// 		}
-	//
-	// 		a:hover,
-	// 		a.focus {
-	// 		}
-	// 	}
-	//
-	// 	li:hover > ul,
-	// 	li.focus > ul {
-	// 		left: auto;
-	// 	}
-	// }
-	//
-	// li {
-	// 	float: left;
-	// 	position: relative;
-	//
-	// 	&:hover > a,
-	// 	&.focus > a {
-	// 	}
-	// }
-	//
-	// a {
-	// 	display: block;
-	// 	text-decoration: none;
-	// }
-	//
-	// .current_page_item > a,
-	// .current-menu-item > a,
-	// .current_page_ancestor > a,
-	// .current-menu-ancestor > a {
-	// }
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
+	background-color: transparent;
+	border: none;
+	overflow: hidden;
+	button.navbar-toggle {
+		background-color: transparent;
+		border: none;
+		-ms-box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		-o-box-shadow: none;
+		box-shadow: none;
+		&:hover,
+		&:focus {
+			background-color: transparent;
+		}
 	}
-	.main-navigation ul {
-		display: block;
+	@media all and (max-width: 767px) {
+		font-size: 12px;
+	}
+
+	ul.header-serch-links-list {
+		margin-bottom: -7.5px;
+	}
+
+	li.menu-item a {
+		@media all and (min-width: 768px) {
+			padding-right: 7.5px;
+			padding-left: 7.5px;
+		}
+	}
+
+	a.header-serch-link {
+		margin: 0;
+		@media all and (min-width: 768px) {
+			margin-left: 15px;
+		}
+		.glyphicon {
+			font-size: 14px;
+		}
 	}
 }
+//
+// .header-search-modal {
+// 	position: fixed;
+// 	top: 0;
+// 	bottom: 0;
+// 	width: 100%;
+// 	// height: 100%;
+// 	background-color: blue;
+// 	opacity: .6;
+// 	z-index: 10000;
+// }
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+
+	font-size: 14px;
 
 	.site-main & {
 		margin: 0 0 1.5em;

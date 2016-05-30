@@ -27,7 +27,7 @@ function birder_posted_on() {
 	// display posted-on on post
 	echo '<span class="posted-on"><dt class="glyphicon glyphicon-calendar">' .
 			'<dl class="sr-only">' . __( 'posting date', 'birder' ) . '</dl>' .
-			'<dd>' . $time_string . '</dd>' .
+			'<dd class="post-date-time">' . $time_string . '</dd>' .
 		'</dt></span>';
 
 	// display author name on post
@@ -74,8 +74,10 @@ function birder_entry_footer() {
 			$tax_label = $taxonomy->labels;
 			$terms = get_the_terms( get_the_ID(), $tax_name );
 			$class_attr = implode( ' ', array(
+				'taxonomy-list',
 				"$tax_name-list",
-				"$tax_name-list-position-" . ( $tax_index + 1 )
+				"$tax_name-list-position-" . ( $tax_index + 1 ),
+				'list-inline'
 			) );
 			$output = '<ul class="' . esc_attr( $class_attr ) . '">';
 

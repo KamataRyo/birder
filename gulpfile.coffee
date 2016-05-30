@@ -7,6 +7,7 @@ concat   = require 'gulp-concat'
 uglify   = require 'gulp-uglify'
 compass  = require 'gulp-compass'
 minify   = require 'gulp-minify-css'
+sourcemaps = require 'gulp-sourcemaps'
 rtlcss   = require 'gulp-rtlcss'
 sort     = require 'gulp-sort'
 wpPot    = require 'gulp-wp-pot'
@@ -42,6 +43,7 @@ gulp.task 'coffee', ()->
 gulp.task 'compass', ()->
     gulp.src src['compass']
         .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
+        .pipe sourcemaps.init()
         .pipe compass
             config_file: './config.rb',
             css: './',
@@ -50,6 +52,7 @@ gulp.task 'compass', ()->
         .pipe gulp.dest './'
         .pipe rtlcss()
         .pipe rename suffix:'-rtl'
+        .pipe sourcemaps.write()
         .pipe gulp.dest './'
 
 
