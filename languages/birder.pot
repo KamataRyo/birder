@@ -22,17 +22,17 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: archive.php:22
+#: archive.php:22, search.php:19
 msgid "%d post"
 msgid_plural "%d posts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: archive.php:44, index.php:44, search.php:36
+#: archive.php:47, index.php:49, search.php:46
 msgid "Older posts"
 msgstr ""
 
-#: archive.php:45, index.php:45, search.php:37
+#: archive.php:48, index.php:50, search.php:47
 msgid "Newer posts"
 msgstr ""
 
@@ -99,10 +99,6 @@ msgstr ""
 msgid "Toggle menu"
 msgstr ""
 
-#: header.php:48
-msgid "Serach"
-msgstr ""
-
 #: inc/customizer.php:28
 msgid "Privacy Settings"
 msgstr ""
@@ -157,7 +153,7 @@ msgstr ""
 msgid "Profile"
 msgstr ""
 
-#: search.php:19
+#: search.php:25
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -177,10 +173,10 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:22, template-parts/content.php:51
+#: template-parts/content-page.php:22, template-parts/content.php:49
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content.php:46
+#: template-parts/content.php:44
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

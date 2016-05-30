@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, p.site-title {
 }
 h1.site-title,
 p.site-title {
-	font-size: 24px;
+	font-size: 32px;
 	margin-top: 20px;
     margin-bottom: 10px;
 	font-family: inherit;
@@ -19,7 +19,8 @@ p.site-title {
 
 header.page-header {
 	/* overwrite Bootstrap */
-	border-bottom: 1px solid #ddd;
+	border-bottom: none;
+	margin-bottom: 0;
 }
 
 .archived-posts-num {

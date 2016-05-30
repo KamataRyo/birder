@@ -27,8 +27,10 @@ get_header(); ?>
 
 					<?php
 					endif;
+					?>
+					<div id="articles" class="articles-container">
+					<?php
 
-					/* Start the Loop */
 					while ( have_posts() ) : the_post();
 
 						/*
@@ -39,6 +41,9 @@ get_header(); ?>
 						get_template_part( 'template-parts/content', get_post_format() );
 
 					endwhile;
+					?>
+					</div>
+					<?php
 
 					the_posts_navigation( array(
 						'prev_text' => '<span class="glyphicon glyphicon-chevron-left"></span>' . __( 'Older posts', 'birder' ),

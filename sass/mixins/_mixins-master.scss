@@ -22,3 +22,27 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin hover-underline-animation($color) {
+	&:before,
+	&:after{
+		position: absolute;
+		top: 1.6em;
+		content: "";
+		display: inline-block;
+		width: 0;
+		height: 1px;
+		background: $color;
+		transition: .1s;
+	}
+	&:before{
+	  left: 50%;
+	}
+	&:after{
+	  right: 50%;
+	}
+	&:hover:before,
+	&:hover:after{
+	  width: 50%;
+	}
+}

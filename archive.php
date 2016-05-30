@@ -22,14 +22,14 @@ get_header(); ?>
 						_n( '%d post', '%d posts', $post_num, 'birder' ),
 						$wp_query->found_posts
 					);
-					the_archive_title( '<h1 class="page-title text-center">', '<span class="archived-posts-num">' . $post_num_text . '</small></h1>' );
+					the_archive_title( '<h1 class="page-title text-center">', '<span class="archived-posts-num">' . $post_num_text . '</span></h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
 
+			<div id="articles" class="articles-container">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+				while ( have_posts() ) : the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -39,6 +39,9 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', get_post_format() );
 
 			endwhile;
+			?>
+			</div><!-- #articles -->
+			<?php
 
 			the_post_navigation( array(
 				'prev_text' => '<span class="glyphicon glyphicon-chevron-left"></span>' . __( 'Older posts', 'birder' ),

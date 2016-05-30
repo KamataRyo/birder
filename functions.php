@@ -122,7 +122,7 @@ add_action( 'widgets_init', 'birder_widgets_init' );
  * Enqueue scripts and styles.
  */
 function birder_scripts() {
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/js/lib/bootstrap/dist/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/js/lib/Honoka/dist/css/bootstrap.min.css' );
 
 	wp_enqueue_script( 'bootstrap.js', get_template_directory_uri() . '/js/lib/bootstrap/dist/js/bootstrap.min.js', array(), '', true );
 

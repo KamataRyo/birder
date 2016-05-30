@@ -39,29 +39,17 @@
 										<span class="icon-bar"></span>
 									</button>
 								</div>
-								<div id="header-menu-navbar" class="collapse navbar-collapse">
-									<ul class="header-serch-links-list nav navbar-nav navbar-right">
-										<li>
-											<a href="" class="header-serch-link navbar-text"  data-toggle="modal" data-target="#header-search">
-												<span class="glyphicon glyphicon-search"></span>
-												<span class="hidden-sm hidden-md hidden-lg">
-													<?php _e( 'Serach', 'birder' ); ?>
-												</span>
-											</a>
-										</li>
-									</ul>
-									<?php
-										wp_nav_menu( array(
-											'theme_location'  => 'header',
-											// 'container'      => 'div',
-											// 'container_id'   => 'header-menu-navbar',
-											// 'container_class' => 'collapse navbar-collapse',
-											'menu_id'         => 'header-menu',
-											'menu_class'      => 'nav navbar-nav navbar-right',
-											'depth'           => 1,
-										) );
-									?>
-								</div><!-- #grader-menu-navbar -->
+								<?php
+									wp_nav_menu( array(
+										'theme_location'  => 'header',
+										'container'      => 'div',
+										'container_id'   => 'header-menu-navbar',
+										'container_class' => 'header-menu-container collapse navbar-collapse',
+										'menu_id'         => 'header-menu',
+										'menu_class'      => 'header-nav-menu nav navbar-nav navbar-right',
+										'depth'           => 1,
+									) );
+								?>
 							</div><!--.container-fluid-->
 						</nav>
 					</div><!--.row-->

@@ -12,6 +12,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
+		<?php if ( has_post_thumbnail() ): ?>
+			<div class="text-center">
+				<?php echo get_the_post_thumbnail(get_the_ID() ); ?>
+			</div>
+		<?php endif; ?>
+
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta text-center">
 			<?php birder_posted_on(); ?>
@@ -26,14 +32,6 @@
 				the_title( '<h2 class="entry-title text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
 		?>
-
-		<div class="text-center">
-			<?php
-				if ( has_post_thumbnail() ) {
-					echo get_the_post_thumbnail(get_the_ID() );
-				}
-			?>
-		</div>
 
 	</header><!-- .entry-header -->
 

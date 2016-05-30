@@ -11,20 +11,21 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="entry-meta text-center">
 			<?php birder_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+
+		<?php the_title( sprintf( '<h2 class="entry-title text-center"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	<?php if ( '' !== get_the_excerpt() ): ?>
+		<div class="entry-summary text-center">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+	<?php endif; ?>
 
-	<footer class="entry-footer">
-		<?php birder_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

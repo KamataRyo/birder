@@ -2,9 +2,14 @@
 	display: block;
 }
 
-.hentry {
-	padding: 2em 0 3em;
+.hentry,
+section.error-404 {
+	margin: 1em;
+	padding: 3em 0 3em;
 	border-top: solid 1px #ddd;
+	&:last-child {
+		border-bottom: solid 1px #ddd;
+	}
 }
 
 .byline,
@@ -29,6 +34,7 @@
 }
 
 .entry-meta {
+	margin: 1em;
 	.glyphicon {
 		font-size: 14px;
 		opacity: .8;
@@ -42,7 +48,9 @@
 	}
 }
 
-.entry-title, .page-title, .widget-title {
+.entry-title,
+.page-title,
+.widget-title {
 	margin-top: 10px;
 	font-size: 24px;
 }
@@ -61,8 +69,17 @@
 	font-size: 14px;
 }
 
+.entry-summary {
+	font-size: 14px;
+}
+
 .entry-footer {
 	font-size: 12px;
+	dl,
+	dd {
+		display: inline;
+		margin: 0;
+	}
 	ul.taxonomy-list {
 		margin-left: 0;
 		padding-left: 0;

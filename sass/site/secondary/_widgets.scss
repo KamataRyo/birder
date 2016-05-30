@@ -1,8 +1,18 @@
-.widget {
-	margin: 0 0 5em;
+section {
+	&.widget_calendar {
+		max-width: 300px;
+		padding: auto;
+		margin: 1em;
+	}
+	&.widget {
+		margin: 2em 1em 3em;
 
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
+		/* Make sure select elements fit in widgets. */
+		select {
+			max-width: 100%;
+		}
+		ul {
+			padding-left: 0;
+		}
 	}
 }
