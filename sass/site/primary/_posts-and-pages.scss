@@ -5,7 +5,7 @@
 .hentry,
 section.error-404 {
 	margin: 1em;
-	padding: 3em 0 3em;
+	padding: 2em 0;
 	border-top: solid 1px #ddd;
 	&:last-child {
 		border-bottom: solid 1px #ddd;
@@ -36,7 +36,7 @@ section.error-404 {
 .entry-meta {
 	margin: 1em;
 	.glyphicon {
-		font-size: 14px;
+		font-size: 21px;
 		opacity: .8;
 	}
 	dd.post-date-time,
@@ -44,7 +44,7 @@ section.error-404 {
 	a.post-edit-link {
 		display: inline;
 		margin-left: .5em;
-		font-size: 12px;
+		font-size: 18px;
 	}
 }
 
@@ -52,29 +52,29 @@ section.error-404 {
 .page-title,
 .widget-title {
 	margin-top: 10px;
-	font-size: 24px;
+	font-size: 36px;
 }
 
 .entry-content {
 	h2 {
-		font-size: 20px;
+		font-size: 30px;
 	}
 	h3 {
-		font-size: 16px;
+		font-size: 24px;
 		font-weight: bold;
 	}
 	h4, h5, h6 {
-		font-size: 14px;
+		font-size: 21px;
 	}
-	font-size: 14px;
+	font-size: 21px;
 }
 
 .entry-summary {
-	font-size: 14px;
+	font-size: 21px;
 }
 
 .entry-footer {
-	font-size: 12px;
+	font-size: 18px;
 	dl,
 	dd {
 		display: inline;
