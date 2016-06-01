@@ -10,12 +10,12 @@ $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
+$color--text: #333;
+
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: darken(#4CAF50,20%);
-$color__link-visited: darken(#21759b, 10%);
-$color__link-hover: darken(#4CAF50,20%);
+$color__link: #21759b;
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;
@@ -69,21 +69,17 @@ big {
 	font-size: 125%;
 }
 
-a:not(.toggle-menu) {
+a {
 	color: $color__link;
-	&:link {
-		text-decoration: none;
-	}
+	&:link,
 	&:visited {
 		text-decoration: none;
-		color: $color__link-visited;
 	}
     &:hover,
 	&:focus{
         border-bottom: 1px dashed #444;
     }
 	&:active {
-		color: $color__link-hover;
 		text-decoration: none;
 		border-bottom: 1px dashed #444;
 		outline: none;
@@ -91,6 +87,7 @@ a:not(.toggle-menu) {
 }
 
 a.toggle-menu {
+    color: $color--text;
     &:hover {
         cursor: pointer;
     }

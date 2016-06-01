@@ -30,7 +30,6 @@ function birder_customize_register_general( $wp_customize ) {
 		)
 	);
 
-
 	$users = get_users( array( 'fields' => array( 'ID', 'display_name' ) ) );
 	$default = $users[0]->ID;
 	$choices = array( -1 => __('- No Display -', 'birder' ) );
@@ -72,15 +71,66 @@ function birder_customize_register_general( $wp_customize ) {
 		)
 	);
 
+	// Text Color
+	$wp_customize->add_setting(
+		'text_color',
+		array(
+			'default' => '#333',
+			'transport'   => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'text_color',
+			array(
+				'label'    => __( "Text Color", 'birder' ),
+				'section'  => 'colors',
+				'settings' => 'text_color',
+			)
+		)
+	);
+
+	// Link Color
+	$wp_customize->add_setting(
+		'link_color',
+		array(
+			'default' => '#21759b',
+			'transport'   => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'link_color',
+			array(
+				'label'    => __( "Link Color", 'birder' ),
+				'section'  => 'colors',
+				'settings' => 'link_color',
+			)
+		)
+	);
 }
 add_action( 'customize_register', 'birder_customize_register_general' );
 
-/**
- * sanitizer for customizer
- */
-function birder_sanitize_username() {
-
+function birder_customize_css() {
+	?>
+		<style type="text/css">
+			body,
+			button,
+			input,
+			select,
+			textarea,
+			a.toggle-menu {
+				color:<?php echo get_theme_mod( 'text_color', '#333' ); ?>
+			}
+			a {
+				color:<?php echo get_theme_mod( 'link_color', '##21759b' ); ?>;
+			}
+		</style>
+	<?php
 }
+add_action( 'wp_head', 'birder_customize_css');
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.

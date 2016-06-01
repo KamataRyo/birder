@@ -35,7 +35,7 @@ gulp.task 'coffee', ()->
     gulp.src src['coffee']
         .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
         .pipe coffee { bare:false }
-        .pipe concat 'index.min.js'
+        # .pipe concat 'index.min.js'
         .pipe uglify()
         .pipe gulp.dest './js/'
 
