@@ -128,7 +128,7 @@ function birder_scripts() {
 
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/js/lib/genericons/genericons.css', array( 'birder-style' ), '3.4.1' );
 
-	wp_enqueue_script( 'birder-script', get_template_directory_uri() . '/js/index.min.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'birder-script', get_template_directory_uri() . '/js/index.js', array( 'jquery' ), '', true );
 
 	wp_enqueue_script( 'birder-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 
@@ -137,6 +137,21 @@ function birder_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'birder_scripts' );
+
+/**
+ *
+ * @see add_action('customize_preview_init',$func)
+ */
+function birder_customizer_live_preview() {
+	 wp_enqueue_script(
+		'birder-themecustomizer',
+		get_template_directory_uri() . '/js/birder-customizer.js',
+		array( 'jquery','customize-preview' ),
+		'',
+		true
+	 );
+}
+add_action( 'customize_preview_init', 'birder_customizer_live_preview' );
 
 /**
  * Implement the Custom Header feature.

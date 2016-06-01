@@ -85,34 +85,42 @@ msgstr ""
 msgid "Privacy Settings"
 msgstr ""
 
-#: inc/customizer.php:36
+#: inc/customizer.php:35
 msgid "- No Display -"
 msgstr ""
 
-#: inc/customizer.php:46
+#: inc/customizer.php:45
 msgid "Representative at footer"
 msgstr ""
 
-#: inc/customizer.php:47
+#: inc/customizer.php:46
 msgid "This term determines whose profile to display on footer as representative. You may also need to update menus and to alter the SNS links for new one."
 msgstr ""
 
-#: inc/customizer.php:62
+#: inc/customizer.php:61
 msgid "Display post's author"
 msgstr ""
 
-#: inc/customizer.php:63
+#: inc/customizer.php:62
 msgid "This term determines whether display authors name on post header or not."
 msgstr ""
 
-#: inc/customizer.php:68
+#: inc/customizer.php:67
 msgctxt "whether display author name on post or not"
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer.php:69
+#: inc/customizer.php:68
 msgctxt "whether display author name on post or not"
 msgid "No"
+msgstr ""
+
+#: inc/customizer.php:87
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer.php:107
+msgid "Link Color"
 msgstr ""
 
 #: inc/template-tags.php:14

@@ -10,7 +10,5 @@ languages/*.pot
 
 vender
 
+js/*.js
 js/lib
-!js/customizer.js
-!js/navigation.js
-!skip-link-focus-fix.js
