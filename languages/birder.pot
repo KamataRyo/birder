@@ -22,48 +22,40 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: archive.php:22, search.php:19
+#: archive.php:20, search.php:19
 msgid "%d post"
 msgid_plural "%d posts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: archive.php:47, index.php:49, search.php:46
-msgid "Older posts"
-msgstr ""
-
-#: archive.php:48, index.php:50, search.php:47
-msgid "Newer posts"
-msgstr ""
-
-#: comments.php:31
+#: comments.php:29
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:40, comments.php:61
+#: comments.php:38, comments.php:57
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:43, comments.php:64
+#: comments.php:40, comments.php:59
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:44, comments.php:65
+#: comments.php:41, comments.php:60
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:78
+#: comments.php:69
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:57
+#: footer.php:56
 msgid "Proudly powered by %s."
 msgstr ""
 
-#: footer.php:64
+#: footer.php:63
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -145,7 +137,15 @@ msgstr ""
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:138
+#: inc/template-tags.php:137, index.php:49, search.php:46
+msgid "Older posts"
+msgstr ""
+
+#: inc/template-tags.php:138, index.php:50, search.php:47
+msgid "Newer posts"
+msgstr ""
+
+#: inc/template-tags.php:152
 msgid "Profile"
 msgstr ""
 

@@ -25,16 +25,14 @@
 			<header id="masthead" role="banner">
 
 				<?php if ( has_nav_menu( 'header' ) ) : ?>
-					<nav id="primary-navigation" class="" role="navigation">
+					<nav id="primary-navigation" class="navgigation" role="navigation">
 						<span class="genericon genericon-menu"></span>
 						<?php
 							wp_nav_menu( array(
 								'theme_location'  => 'header',
 								'container'      => 'div',
-								'container_id'   => '',
-								'container_class' => '',
 								'menu_id'         => 'header-menu',
-								'menu_class'      => '',
+								'menu_class'      => 'list-inline text-right',
 								'depth'           => 1,
 							) );
 						?>

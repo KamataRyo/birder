@@ -128,6 +128,33 @@ function birder_entry_footer() {
 endif;
 
 
+if ( ! function_exists( 'birder_the_posts_navigation' ) ) :
+/**
+ * Wrapper for the_post_navigation
+ */
+function birder_the_posts_navigation() {
+	the_posts_navigation( array(
+		'prev_text' => '<span class="genericon genericon-previous"></span>' . __( 'Older posts', 'birder' ),
+		'next_text' => __( 'Newer posts', 'birder' ) . '<span class="genericon genericon-next"></span>'
+	) );
+}
+endif;
+
+
+if ( ! function_exists( 'birder_the_post_navigation' ) ) :
+/**
+ * Wrapper for the_post_navigation
+ */
+function birder_the_post_navigation() {
+	the_post_navigation( array(
+		'prev_text' => '<span class="genericon genericon-previous"></span>%title',
+		'next_text' => '%title<span class="genericon genericon-next"></span>'
+	) );
+}
+endif;
+
+
+
 if ( ! function_exists( 'birder_representative_profile' ) ) :
 /**
  * Print representative's profile
@@ -144,12 +171,12 @@ function birder_representative_profile( $id ) {
 	    </p>
 
 		<?php if ( has_nav_menu( 'SNS_on_profile' ) ) : ?>
-		    <nav id="SNS-linklist-profile" class="SNS-linklist SNS-linklist_profile text-center">
+		    <nav id="representative-linklist" class="SNS-linklist">
 		        <?php
 		            wp_nav_menu( array(
 		                'theme_location' => 'SNS_on_profile',
 		                'menu_id'         => 'SNS-list',
-		                'menu_class'      => 'SNS-list list-inline',
+		                'menu_class'      => 'SNS-list list-inline text-center',
 		                'depth'           => 1,
 		                'link_before'     => '<span class="screen-reader-text">',
 						'link_after'      => '</span>',

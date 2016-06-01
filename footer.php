@@ -27,7 +27,7 @@
 							wp_nav_menu( array(
 								'theme_location' => 'footer',
 								'menu_id'        => 'footer-menu',
-								'menu_class'     => 'footer-nav footer-nav_birder list-inline',
+								'menu_class'     => 'footer-nav list-inline text-center',
 								'depth'          => 1,
 							) );
 						?>
@@ -35,13 +35,12 @@
 				<?php endif; ?>
 
 				<?php if ( has_nav_menu( 'SNS_on_footer' ) ) : ?>
-					<nav id="SNS-linklist-footer" class="SNS-linklist SNS-linklist_footer text-center">
+					<nav id="SNS-linklist-footer" class="SNS-linklist text-center">
 						<?php
 							wp_nav_menu( array(
 								'theme_location'  => 'SNS_on_footer',
 								'menu_id'         => 'SNS-list',
-								'container_class' => 'menu-sns-container text-center',
-								'menu_class'      => 'SNS-list list-inline',
+								'menu_class'      => 'SNS-list list-inline text-center',
 								'depth'           => 1,
 								'link_before'     => '<span class="screen-reader-text">',
 								'link_after'      => '</span>',
