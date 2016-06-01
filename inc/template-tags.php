@@ -149,7 +149,6 @@ function birder_representative_profile( $id ) {
 		            wp_nav_menu( array(
 		                'theme_location' => 'SNS_on_profile',
 		                'menu_id'         => 'SNS-list',
-		                'container_class' => 'menu-sns-container text-center',
 		                'menu_class'      => 'SNS-list list-inline',
 		                'depth'           => 1,
 		                'link_before'     => '<span class="screen-reader-text">',
