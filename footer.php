@@ -43,7 +43,7 @@ $representative_id = (int)get_theme_mod( 'display_profile_at_footer' );
 									'theme_location'  => 'SNS_on_footer',
 									'menu_id'         => 'SNS-list',
 									'container_class' => 'menu-sns-container text-center',
-									'menu_class'      => 'SNS-list SNS-list_birder list-inline',
+									'menu_class'      => 'SNS-list list-inline',
 									'depth'           => 1,
 									'link_before'     => '<span class="sr-only">',
 									'link_after'      => '</span>',

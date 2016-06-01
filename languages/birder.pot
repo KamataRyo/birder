@@ -145,11 +145,11 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:121
+#: inc/template-tags.php:124
 msgid "Leave a Comment<span class=\"sr-only\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:135
+#: inc/template-tags.php:138
 msgid "Profile"
 msgstr ""
 

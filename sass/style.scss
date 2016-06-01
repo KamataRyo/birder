@@ -105,23 +105,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
-
-
-// example to show only SNS icons
-.SNS-list_birder {
-	a:before {
-		content:'?';// being replace to icon font
-	}
-	a[href*="facebook.com"]:before {
-		content:'[facebook]';// being replace to icon font
-	}
-	a[href*="github.com"]:before {
-		content:'[github]';// being replace to icon font
-	}
-	a[href*="instagram.com"]:before {
-		content:'[instagram]';// being replace to icon font
-	}
-}
-
-// edit footer navbar style
-.footer-nav_birder {}

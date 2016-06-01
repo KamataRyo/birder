@@ -35,32 +35,6 @@
 	ul.header-nav-menu {
 		margin: 0;
 	}
-
-
-	li.menu-item a {
-		@media all and (max-width: 767px) {
-			padding: 10px 10.5px;
-			margin: 0;
-		}
-		@media all and (min-width: 768px) {
-			margin: 10px 10.5px;
-			padding: 0;
-			&:hover {
-				background-color: transparent;
-			}
-			@include hover-underline-animation(#666);
-		}
-	}
-
-	a.header-serch-link {
-		margin: 0;
-		@media all and (min-width: 768px) {
-			margin-left: 15px;
-		}
-		.glyphicon {
-			font-size: 21px;
-		}
-	}
 }
 
 .comment-navigation,

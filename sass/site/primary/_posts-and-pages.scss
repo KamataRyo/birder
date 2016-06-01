@@ -25,7 +25,7 @@ section.error-404 {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 5em 0 0;
+	margin: 5em 0 3em;
 }
 
 .page-links {
@@ -63,10 +63,34 @@ section.error-404 {
 		font-size: 24px;
 		font-weight: bold;
 	}
-	h4, h5, h6 {
+	h4 {
+		font-size: 24px;
+	}
+	h5 {
+		font-size: 21px;
+		text-decoration: underline;
+	}
+	h6 {
 		font-size: 21px;
 	}
-	font-size: 21px;
+	table {
+		thead tr, tfoot tr {
+			border-top:2px solid #666;
+			border-bottom:2px solid #666;
+		}
+		tbody tr {
+			&:first-child {
+				border-top:2px solid #666;
+			}
+			border-bottom: 1px solid #666;
+			&:last-child {
+				border-bottom:2px solid #666;
+			}
+		}
+	}
+	ul, ol {
+		padding: 0;
+	}
 }
 
 .entry-summary {
@@ -75,6 +99,7 @@ section.error-404 {
 
 .entry-footer {
 	font-size: 18px;
+	color: #666;
 	dl,
 	dd {
 		display: inline;

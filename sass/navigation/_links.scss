@@ -1,19 +1,90 @@
 a {
 	color: $color__link;
-
+	&:link {
+		text-decoration: none;
+	}
 	&:visited {
+		text-decoration: none;
 		color: $color__link-visited;
 	}
 	&:hover,
 	&:focus,
 	&:active {
 		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
+		text-decoration: none;
+		border-bottom: 1px dashed #444;
+		outline: none;
 	}
 	&:hover,
 	&:active {
-		outline: 0;
+	}
+}
+.menu-item > a {
+	@media all and (max-width: 767px) {
+		padding: 10px 10.5px;
+		margin: 0;
+	}
+	@media all and (min-width: 768px) {
+		margin: 10px 10.5px;
+		padding: 0;
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
+
+// example to show only SNS icons
+.SNS-list {
+	a {
+		color: #444;
+		border: none;
+	}
+	a:hover {
+		color: #aaa;
+	}
+	a:before {
+		content: '\f107';
+		font: 32px 'Genericons';
+	}
+
+	$url-genericons: (
+		"codepen.io":      "\f216",
+		"digg.com":        "\f221",
+		"dribbble.com":    "\f201",
+		"dropbox.com":     "\f225",
+		"facebook.com":    "\f203",
+		"flickr.com":      "\f211",
+		"foursquare.com":  "\f226",
+		"plus.google.com": "\f206",
+		"github.com":      "\f200",
+		"instagram.com":   "\f215",
+		"linkedin.com":    "\f208",
+		"path.com":        "\f219",
+		"pinterest.com":   "\f210",
+		"getpocket.com":   "\f224",
+		"polldaddy.com":   "\f217",
+		"reddit.com":      "\f222",
+		"skype.com":       "\f220",
+		"stumbleupon.com": "\f223",
+		"tumblr.com":      "\f214",
+		"twitter.com":     "\f202",
+		"vimeo.com":       "\f212",
+		"wordpress.com":   "\f205",
+		"wordpress.org":   "\f205",
+		"youtube.com":     "\f213",
+		"spotify.com":     "\f515",
+		"twitch.tv":       "\f516",
+	);
+
+	@each $url, $genericon in $url-genericons {
+		a[href*="#{$url}"]:before {
+			content: "#{$genericon}";
+		}
+	}
+	a[href$="/feed/"]:before {
+		content: "\f413";
+	}
+	a[href^="mailto:"]:before {
+		content: "\f410";
 	}
 }

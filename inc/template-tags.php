@@ -73,6 +73,9 @@ function birder_entry_footer() {
 			$taxonomy = get_taxonomy( $tax_name );
 			$tax_label = $taxonomy->labels;
 			$terms = get_the_terms( get_the_ID(), $tax_name );
+			if ( ! $terms ) {
+				continue;
+			}
 			$class_attr = implode( ' ', array(
 				'taxonomy-list',
 				"$tax_name-list",
@@ -147,7 +150,7 @@ function birder_representative_profile( $id ) {
 		                'theme_location' => 'SNS_on_profile',
 		                'menu_id'         => 'SNS-list',
 		                'container_class' => 'menu-sns-container text-center',
-		                'menu_class'      => 'SNS-list SNS-list_birder list-inline',
+		                'menu_class'      => 'SNS-list list-inline',
 		                'depth'           => 1,
 		                'link_before'     => '<span class="sr-only">',
 						'link_after'      => '</span>',
