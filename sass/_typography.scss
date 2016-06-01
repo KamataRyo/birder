@@ -1,0 +1,158 @@
+$font-size-base: 16px;
+
+$font__line-height-title: 1.1;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: darken(#4CAF50,20%);
+$color__link-visited: darken(#21759b, 10%);
+$color__link-hover: darken(#4CAF50,20%);
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+html {
+    font-family: sans-serif;
+    font-size: $font-size-base;
+}
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+    @include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+pre {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	@include font-size(0.9375);
+	line-height: $font__line-height-pre;
+	max-width: 100%;
+	overflow-x: scroll;
+    overflow-y: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	@include font-size(0.9375);
+}
+
+big {
+	font-size: 125%;
+}
+
+a {
+	color: $color__link;
+	&:link {
+		text-decoration: none;
+	}
+	&:visited {
+		text-decoration: none;
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+		text-decoration: none;
+		border-bottom: 1px dashed #444;
+		outline: none;
+	}
+}
+
+h1,
+.site-title,
+.entry-title,
+.page-title,
+.widget-title {
+	@include font-size(2);
+    font-weight: 300;
+}
+
+.site-title {
+	line-height: $font__line-height-title;
+}
+
+h2 {
+	@include font-size(1.8);
+}
+
+h3 {
+    @include font-size(1.5);
+	font-weight: bold;
+}
+
+h4,
+.entry-summary {
+    @include font-size(1.5);
+}
+
+h5 {
+    @include font-size(1.25);
+	text-decoration: underline;
+}
+
+h6,
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+    @include font-size(1.25);
+}
+
+.site-title {
+	margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+pre {
+	background: $color__background-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow-x: scroll;
+    overflow-y: auto;
+	padding: 1.6em;
+}
+
+.entry-title,
+.page-title,
+.widget-title {
+	margin-top: 10px;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $color__border-abbr;
+	cursor: help;
+}
+
+mark, ins {
+	background: $color__background-ins;
+	text-decoration: none;
+}

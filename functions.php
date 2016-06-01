@@ -122,9 +122,11 @@ add_action( 'widgets_init', 'birder_widgets_init' );
  * Enqueue scripts and styles.
  */
 function birder_scripts() {
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/js/lib/genericons/genericons.css', array(), '3.4.1' );
+	wp_enqueue_style( 'open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&subset=latin%2Clatin-ext', array() );
 
-	wp_enqueue_style( 'birder-style', get_stylesheet_uri(), array() );
+	wp_enqueue_style( 'birder-style', get_stylesheet_uri(), array( 'open-sans' ) );
+
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/js/lib/genericons/genericons.css', array( 'birder-style' ), '3.4.1' );
 
 	wp_enqueue_script( 'birder-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 

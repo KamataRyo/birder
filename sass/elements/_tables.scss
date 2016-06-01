@@ -2,3 +2,19 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+
+thead tr, tfoot tr {
+	border-top:2px solid #666;
+	border-bottom:2px solid #666;
+}
+
+tbody tr {
+	&:first-child {
+		border-top:2px solid #666;
+	}
+	border-bottom: 1px solid #666;
+	&:last-child {
+		border-bottom:2px solid #666;
+	}
+
+}

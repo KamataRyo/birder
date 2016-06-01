@@ -15,13 +15,14 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					$post_num = $wp_query->found_posts;
-					$post_num_text = sprintf(
-						_n( '%d post', '%d posts', $post_num, 'birder' ),
-						$wp_query->found_posts
+					the_archive_title(
+						'<h1 class="page-title text-center">',
+						birder_get_current_posts_num_text() . '</h1>'
 					);
-					the_archive_title( '<h1 class="page-title text-center">', '<span class="archived-posts-num">' . $post_num_text . '</span></h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					the_archive_description(
+						'<div class="taxonomy-description">',
+						'</div>'
+					);
 				?>
 			</header><!-- .page-header -->
 

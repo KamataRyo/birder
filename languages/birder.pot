@@ -22,12 +22,6 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: archive.php:20, search.php:19
-msgid "%d post"
-msgid_plural "%d posts"
-msgstr[0] ""
-msgstr[1] ""
-
 #: comments.php:29
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -121,35 +115,42 @@ msgctxt "whether display author name on post or not"
 msgid "No"
 msgstr ""
 
-#: inc/template-tags.php:29
+#: inc/template-tags.php:14
+msgid "(%d post)"
+msgid_plural "(%d posts)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:33
 msgid "posting date"
 msgstr ""
 
-#: inc/template-tags.php:36
+#: inc/template-tags.php:45
 msgid "post author"
 msgstr ""
 
-#: inc/template-tags.php:48, template-parts/content-page.php:33
+#: inc/template-tags.php:54
+msgctxt "post-edit-link"
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:124
+#: inc/template-tags.php:131
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:137, index.php:49, search.php:46
+#: inc/template-tags.php:144
 msgid "Older posts"
 msgstr ""
 
-#: inc/template-tags.php:138, index.php:50, search.php:47
+#: inc/template-tags.php:145
 msgid "Newer posts"
 msgstr ""
 
-#: inc/template-tags.php:152
+#: inc/template-tags.php:172
 msgid "Profile"
 msgstr ""
 
-#: search.php:25
+#: search.php:21
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -171,6 +172,10 @@ msgstr ""
 
 #: template-parts/content-page.php:22, template-parts/content.php:49
 msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-page.php:33
+msgid "Edit %s"
 msgstr ""
 
 #: template-parts/content.php:44

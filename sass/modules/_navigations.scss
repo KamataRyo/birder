@@ -1,47 +1,27 @@
-a {
-	color: $color__link;
-	&:link {
-		text-decoration: none;
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
 	}
-	&:visited {
-		text-decoration: none;
-		color: $color__link-visited;
+
+	.nav-previous {
+		float: left;
+		width: 50%;
 	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-		text-decoration: none;
-		border-bottom: 1px dashed #444;
-		outline: none;
-	}
-	&:hover,
-	&:active {
-	}
-}
-.menu-item > a {
-	@media all and (max-width: 767px) {
-		padding: 10px 10.5px;
-		margin: 0;
-	}
-	@media all and (min-width: 768px) {
-		margin: 10px 10.5px;
-		padding: 0;
-		&:hover {
-			background-color: transparent;
-		}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
 	}
 }
 
-// example to show only SNS icons
+//show only SNS icons
 .SNS-list {
-	a {
-		color: #444;
-		border: none;
-	}
-	a:hover {
-		color: #aaa;
-	}
+
 	a:before {
 		content: '\f107';
 		font: 32px 'Genericons';

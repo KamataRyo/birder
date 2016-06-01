@@ -3,7 +3,7 @@
 }
 
 .hentry,
-section.error-404 {
+.error-404 {
 	margin: 1em;
 	padding: 2em 0;
 	border-top: solid 1px #ddd;
@@ -12,15 +12,29 @@ section.error-404 {
 	}
 }
 
-.byline,
 .updated:not(.published){
 	display: none;
 }
 
-.single .byline,
-.group-blog .byline {
-	display: inline;
+.posted-on {
+	&:before {
+		content: '\f303';
+		font-family: 'Genericons';
+	}
 }
+.posted-by {
+	&:before {
+		content: '\f304';
+		font-family: 'Genericons';
+	}
+}
+.edit-link {
+	&:before {
+		content: '\f445';
+		font-family: 'Genericons';
+	}
+}
+
 
 .page-content,
 .entry-content,
@@ -33,80 +47,7 @@ section.error-404 {
 	margin: 0 0 1.5em;
 }
 
-.entry-meta {
-	margin: 1em;
-	.glyphicon {
-		font-size: 21px;
-		opacity: .8;
-	}
-	dd.post-date-time,
-	dd.author,
-	a.post-edit-link {
-		display: inline;
-		margin-left: .5em;
-		font-size: 18px;
-	}
-}
-
-.entry-title,
-.page-title,
-.widget-title {
-	margin-top: 10px;
-	font-size: 36px;
-}
-
-.entry-content {
-	h2 {
-		font-size: 30px;
-	}
-	h3 {
-		font-size: 24px;
-		font-weight: bold;
-	}
-	h4 {
-		font-size: 24px;
-	}
-	h5 {
-		font-size: 21px;
-		text-decoration: underline;
-	}
-	h6 {
-		font-size: 21px;
-	}
-	table {
-		thead tr, tfoot tr {
-			border-top:2px solid #666;
-			border-bottom:2px solid #666;
-		}
-		tbody tr {
-			&:first-child {
-				border-top:2px solid #666;
-			}
-			border-bottom: 1px solid #666;
-			&:last-child {
-				border-bottom:2px solid #666;
-			}
-		}
-	}
-	ul, ol {
-		padding: 0;
-	}
-}
-
-.entry-summary {
-	font-size: 21px;
-}
-
-.entry-footer {
-	font-size: 18px;
-	color: #666;
-	dl,
-	dd {
-		display: inline;
-		margin: 0;
-	}
-	ul.taxonomy-list {
-		margin-left: 0;
-		padding-left: 0;
-	}
+.taxonomy-list {
+	margin-left: 0;
+	padding-left: 0;
 }

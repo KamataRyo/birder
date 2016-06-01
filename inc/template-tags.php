@@ -7,52 +7,59 @@
  * @package birder
  */
 
+ if ( ! function_exists( 'birder_posted_on' ) ) :
+function birder_get_current_posts_num_text() {
+	global $wp_query;
+	return '<span class="">' . sprintf(
+		_n( '(%d post)', '(%d posts)', 2, 'birder' ),
+		$wp_query->found_posts
+	) . '</span>';
+}
+endif;
+
+
 if ( ! function_exists( 'birder_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function birder_posted_on() {
-	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	$time_string_format = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string_format = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="entry-date updated" datetime="%3$s">%4$s</time>';
 	}
 
-	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
-	);
-
 	// display posted-on on post
-	echo '<span class="posted-on"><dt class="genericon genericon-time">' .
-			'<dl class="screen-reader-text">' . __( 'posting date', 'birder' ) . '</dl>' .
-			'<dd class="post-date-time">' . $time_string . '</dd>' .
-		'</dt></span>';
+	echo '<span class="posted-on">' .
+		'<span class="screen-reader-text">' . __( 'posting date', 'birder' ) . '</span>' .
+        sprintf( $time_string_format,
+    		esc_attr( get_the_date( 'c' ) ),
+    		esc_html( get_the_date() ),
+    		esc_attr( get_the_modified_date( 'c' ) ),
+    		esc_html( get_the_modified_date() )
+    	) .
+	'</span>';
 
 	// display author name on post
 	if ( get_theme_mod( 'display_author_on_posts' ) ) {
-		echo '<span class="byline"><dt class="genericon genericon-user">' .
-			'<dl class="screen-reader-text">' . __( 'post author', 'birder' ) . '</dl>' .
-			'<dd class="author vcard">' .
-				'<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .
+		echo '<span class="posted-by">' .
+			'<span class="screen-reader-text">' . __( 'post author', 'birder' ) . '</span>' .
+				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .
 					esc_html( get_the_author() ) .
 				'</a>' .
-			'</dd>' .
-		'</dt></span>';
+		'</span>';
 	}
 
 	edit_post_link(
 		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'birder' ),
+			esc_html_x( 'Edit %s', 'post-edit-link', 'birder' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		'<span class="edit-link genericon genericon-cog">',
+		'<span class="edit-link">',
 		'</span>'
 	);
 }
 endif;
+
 
 if ( ! function_exists( 'birder_entry_footer' ) ) :
 /**

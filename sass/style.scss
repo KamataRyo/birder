@@ -43,7 +43,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -53,7 +57,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import "typography";
 
 /*--------------------------------------------------------------
 # Elements
@@ -68,7 +72,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+@import "modules/navigations";
+
+/*--------------------------------------------------------------
+# Lists
+--------------------------------------------------------------*/
+@import "modules/lists";
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -89,11 +98,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Widgets
 --------------------------------------------------------------*/
 @import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Searchforms
---------------------------------------------------------------*/
-@import "site/secondary/searchforms";
 
 /*--------------------------------------------------------------
 # Content
