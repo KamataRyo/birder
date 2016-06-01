@@ -15,8 +15,6 @@
     "tests"
   ],
   "devDependencies": {
-    "bootstrap": "^3.3.6",
-    "Honoka": "v3.3.6-a",
     "Genericons": "git@github.com:Automattic/Genericons.git#^3.0.3"
   }
 }

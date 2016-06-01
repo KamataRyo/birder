@@ -25,15 +25,15 @@ function birder_posted_on() {
 	);
 
 	// display posted-on on post
-	echo '<span class="posted-on"><dt class="glyphicon glyphicon-calendar">' .
-			'<dl class="sr-only">' . __( 'posting date', 'birder' ) . '</dl>' .
+	echo '<span class="posted-on"><dt class="genericon genericon-time">' .
+			'<dl class="screen-reader-text">' . __( 'posting date', 'birder' ) . '</dl>' .
 			'<dd class="post-date-time">' . $time_string . '</dd>' .
 		'</dt></span>';
 
 	// display author name on post
 	if ( get_theme_mod( 'display_author_on_posts' ) ) {
-		echo '<span class="byline"><dt class="glyphicon glyphicon-user">' .
-			'<dl class="sr-only">' . __( 'post author', 'birder' ) . '</dl>' .
+		echo '<span class="byline"><dt class="genericon genericon-user">' .
+			'<dl class="screen-reader-text">' . __( 'post author', 'birder' ) . '</dl>' .
 			'<dd class="author vcard">' .
 				'<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .
 					esc_html( get_the_author() ) .
@@ -46,9 +46,9 @@ function birder_posted_on() {
 		sprintf(
 			/* translators: %s: Name of current post */
 			esc_html__( 'Edit %s', 'birder' ),
-			the_title( '<span class="sr-only">"', '"</span>', false )
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		'<span class="edit-link glyphicon glyphicon-wrench">',
+		'<span class="edit-link genericon genericon-cog">',
 		'</span>'
 	);
 }
@@ -121,7 +121,7 @@ function birder_entry_footer() {
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="sr-only"> on %s</span>', 'birder' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'birder' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 }
@@ -152,7 +152,7 @@ function birder_representative_profile( $id ) {
 		                'container_class' => 'menu-sns-container text-center',
 		                'menu_class'      => 'SNS-list list-inline',
 		                'depth'           => 1,
-		                'link_before'     => '<span class="sr-only">',
+		                'link_before'     => '<span class="screen-reader-text">',
 						'link_after'      => '</span>',
 		            ) );
 		        ?>
