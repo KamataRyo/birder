@@ -128,6 +128,8 @@ function birder_scripts() {
 
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/js/lib/genericons/genericons.css', array( 'birder-style' ), '3.4.1' );
 
+	wp_enqueue_script( 'birder-script', get_template_directory_uri() . '/js/index.min.js', array( 'jquery' ), '', true );
+
 	wp_enqueue_script( 'birder-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

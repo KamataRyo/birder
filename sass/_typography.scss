@@ -69,7 +69,7 @@ big {
 	font-size: 125%;
 }
 
-a {
+a:not(.toggle-menu) {
 	color: $color__link;
 	&:link {
 		text-decoration: none;
@@ -78,14 +78,26 @@ a {
 		text-decoration: none;
 		color: $color__link-visited;
 	}
-	&:hover,
-	&:focus,
+    &:hover,
+	&:focus{
+        border-bottom: 1px dashed #444;
+    }
 	&:active {
 		color: $color__link-hover;
 		text-decoration: none;
 		border-bottom: 1px dashed #444;
 		outline: none;
 	}
+}
+
+a.toggle-menu {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.icon-links a {
+    border-bottom: none;
 }
 
 h1,

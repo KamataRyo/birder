@@ -16,7 +16,7 @@ sketch   = require 'gulp-sketch'
 meta     = require './package.json'
 
 scopes = [
-    'coffee/**/*.coffee'
+    'js/**/*.coffee'
     'sass/**/*.scss'
     '**/*.php'
     'languages/*.po'
@@ -25,7 +25,7 @@ scopes = [
 tasks = ['coffee', 'compass', 'wpPot', 'gettext', 'sketchSS']
 
 src =
-    coffee:   'coffee/**/*.coffee'
+    coffee:   'js/**/*.coffee'
     compass:  'sass/**/*.scss'
     wpPot:    '**/*.php'
     gettext:  'languages/*.po'
@@ -83,7 +83,7 @@ gulp.task 'sketchSS', ()->
 
 
 
-gulp.task 'watch', ()->
+gulp.task 'watch',tasks , ()->
     gulp.watch scopes, tasks
 
 gulp.task 'default', tasks.concat('watch')

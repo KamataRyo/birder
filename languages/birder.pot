@@ -77,7 +77,7 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:24
+#: header.php:25, header.php:33
 msgid "Skip to content"
 msgstr ""
 
