@@ -14,7 +14,7 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "Genericons": "git@github.com:Automattic/Genericons.git#^3.0.3"
+  "dependencies": {
+    "Genericons": "https://github.com/Automattic/Genericons.git#^3.0.3"
   }
 }
