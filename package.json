@@ -1,14 +1,13 @@
 {
-  "name": "birder",
+  "name": "biwako",
   "version": "1.0.0",
-  "description": "WordPress theme for birders.",
+  "description": "This is my wordpress theme",
   "main": "index.js",
   "scripts": {
-    "postinstall": "git clone git@github.com:twittem/wp-bootstrap-navwalker.git ./vender/twittem/wp_bootstrap_navwalker"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KamataRyo/kamome-note.git"
+    "url": "git+https://github.com/KamataRyo/biwako.git"
   },
   "author": {
     "name": "KamataRyo",
@@ -16,9 +15,9 @@
   },
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/KamataRyo/birder/issues"
+    "url": "https://github.com/KamataRyo/biwako/issues"
   },
-  "homepage": "https://biwako.io/birder/",
+  "homepage": "https://biwako.io/biwako/",
   "devDependencies": {
     "coffee-script": "^1.10.0",
     "gulp": "^3.9.0",

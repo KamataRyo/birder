@@ -4,25 +4,25 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package birder
+ * @package biwako
  */
 
- if ( ! function_exists( 'birder_posted_on' ) ) :
-function birder_get_current_posts_num_text() {
+ if ( ! function_exists( 'biwako_posted_on' ) ) :
+function biwako_get_current_posts_num_text() {
 	global $wp_query;
 	return '<span class="">' . sprintf(
-		_n( '(%d post)', '(%d posts)', 2, 'birder' ),
+		_n( '(%d post)', '(%d posts)', 2, 'biwako' ),
 		$wp_query->found_posts
 	) . '</span>';
 }
 endif;
 
 
-if ( ! function_exists( 'birder_posted_on' ) ) :
+if ( ! function_exists( 'biwako_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function birder_posted_on() {
+function biwako_posted_on() {
 	$time_string_format = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string_format = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="entry-date updated" datetime="%3$s">%4$s</time>';
@@ -30,7 +30,7 @@ function birder_posted_on() {
 
 	// display posted-on on post
 	echo '<span class="posted-on entry-meta--element">' .
-		'<span class="screen-reader-text">' . __( 'posting date', 'birder' ) . '</span>' .
+		'<span class="screen-reader-text">' . __( 'posting date', 'biwako' ) . '</span>' .
         sprintf( $time_string_format,
     		esc_attr( get_the_date( 'c' ) ),
     		esc_html( get_the_date() ),
@@ -42,7 +42,7 @@ function birder_posted_on() {
 	// display author name on post
 	if ( get_theme_mod( 'display_author_on_posts' ) ) {
 		echo '<span class="posted-by entry-meta--element">' .
-			'<span class="screen-reader-text">' . __( 'post author', 'birder' ) . '</span>' .
+			'<span class="screen-reader-text">' . __( 'post author', 'biwako' ) . '</span>' .
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .
 					esc_html( get_the_author() ) .
 				'</a>' .
@@ -51,7 +51,7 @@ function birder_posted_on() {
 
 	edit_post_link(
 		sprintf(
-			esc_html_x( 'Edit %s', 'post-edit-link', 'birder' ),
+			esc_html_x( 'Edit %s', 'post-edit-link', 'biwako' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link entry-meta--element">',
@@ -61,16 +61,16 @@ function birder_posted_on() {
 endif;
 
 
-if ( ! function_exists( 'birder_entry_footer' ) ) :
+if ( ! function_exists( 'biwako_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags,
  * other taxonomies by filter and comments.
  */
-function birder_entry_footer() {
+function biwako_entry_footer() {
 	if ( 'post' === get_post_type() ) {
 
 		$tax_names = apply_filters(
-			'birder_get_post_taxonomies',
+			'biwako_get_post_taxonomies',
 			array( 'category', 'post_tag' )
 		);
 
@@ -128,48 +128,48 @@ function birder_entry_footer() {
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'birder' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'biwako' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 }
 endif;
 
 
-if ( ! function_exists( 'birder_the_posts_navigation' ) ) :
+if ( ! function_exists( 'biwako_the_posts_navigation' ) ) :
 /**
  * Wrapper for the_post_navigation
  */
-function birder_the_posts_navigation() {
+function biwako_the_posts_navigation() {
 	the_posts_navigation( array(
-		'prev_text' => __( 'Older posts', 'birder' ),
-		'next_text' => __( 'Newer posts', 'birder' )
+		'prev_text' => __( 'Older posts', 'biwako' ),
+		'next_text' => __( 'Newer posts', 'biwako' )
 	) );
 }
 endif;
 
 
-if ( ! function_exists( 'birder_the_post_navigation' ) ) :
+if ( ! function_exists( 'biwako_the_post_navigation' ) ) :
 /**
  * Wrapper for the_post_navigation
  */
-function birder_the_post_navigation() {
+function biwako_the_post_navigation() {
 	the_post_navigation( array(
-		'prev_text' => __( 'the older post', 'birder' ),
-		'next_text' => __( 'the newer post', 'birder' )
+		'prev_text' => __( 'the older post', 'biwako' ),
+		'next_text' => __( 'the newer post', 'biwako' )
 	) );
 }
 endif;
 
 
 
-if ( ! function_exists( 'birder_representative_profile' ) ) :
+if ( ! function_exists( 'biwako_representative_profile' ) ) :
 /**
  * Print representative's profile
  */
-function birder_representative_profile( $id ) {
+function biwako_representative_profile( $id ) {
 	?>
 	<aside>
-	    <h2 class="text-center"><?php echo __('Profile', 'birder'); ?></h2>
+	    <h2 class="text-center"><?php echo __('Profile', 'biwako'); ?></h2>
 	    <p class="text-center"><?php echo get_avatar( $id ); ?><p>
 	    <p class="text-center">
 	        <a href="<?php echo get_author_posts_url( $id ); ?>">
@@ -199,14 +199,14 @@ function birder_representative_profile( $id ) {
 endif;
 
 /**
- * Flush out the transients used in birder_categorized_blog.
+ * Flush out the transients used in biwako_categorized_blog.
  */
-function birder_category_transient_flusher() {
+function biwako_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'birder_categories' );
+	delete_transient( 'biwako_categories' );
 }
-add_action( 'edit_category', 'birder_category_transient_flusher' );
-add_action( 'save_post',     'birder_category_transient_flusher' );
+add_action( 'edit_category', 'biwako_category_transient_flusher' );
+add_action( 'save_post',     'biwako_category_transient_flusher' );

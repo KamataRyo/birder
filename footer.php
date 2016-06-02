@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package birder
+ * @package biwako
  */
 
 ?>
@@ -16,7 +16,7 @@
 						<?php $representative_id = (int)get_theme_mod( 'display_profile_at_footer' ); ?>
 						<?php if ( -1 !== $representative_id ): ?>
 							<div id="author-profile" class="author-profile-container">
-								<?php birder_representative_profile( $representative_id ); ?>
+								<?php biwako_representative_profile( $representative_id ); ?>
 							</div>
 						<?php endif; ?>
 
@@ -52,15 +52,15 @@
 							<p class="text-center">
 								<?php
 									printf(
-										'<a href="https://wordpress.org/">' . esc_html__( 'Proudly powered by %s.', 'birder' ) . '</a>',
+										'<a href="https://wordpress.org/">' . esc_html__( 'Proudly powered by %s.', 'biwako' ) . '</a>',
 										'WordPress'
 									);
 								?>
 							<span class="sep">|</span>
 								<?php
 									printf(
-										esc_html__( 'Theme: %1$s by %2$s.', 'birder' ),
-										'<a href="https://github.com/KamataRyo/birder">birder</a>',
+										esc_html__( 'Theme: %1$s by %2$s.', 'biwako' ),
+										'<a href="https://github.com/KamataRyo/biwako">biwako</a>',
 										'KamataRyo'
 									);
 								?>

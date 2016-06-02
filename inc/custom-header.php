@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package birder
+ * @package biwako
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses birder_header_style()
+ * @uses biwako_header_style()
  */
-function birder_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'birder_custom_header_args', array(
+function biwako_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'biwako_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'birder_header_style',
+		'wp-head-callback'       => 'biwako_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'birder_custom_header_setup' );
+add_action( 'after_setup_theme', 'biwako_custom_header_setup' );
 
-if ( ! function_exists( 'birder_header_style' ) ) :
+if ( ! function_exists( 'biwako_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see birder_custom_header_setup().
+ * @see biwako_custom_header_setup().
  */
-function birder_header_style() {
+function biwako_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

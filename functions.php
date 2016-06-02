@@ -1,10 +1,10 @@
 <?php
 /**
- * birder functions and definitions.
+ * biwako functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package birder
+ * @package biwako
  */
 
 /**
@@ -12,7 +12,7 @@
  */
 require_once get_template_directory() . '/vender/twittem/wp_bootstrap_navwalker/wp_bootstrap_navwalker.php';
 
-if ( ! function_exists( 'birder_setup' ) ) :
+if ( ! function_exists( 'biwako_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,14 +20,14 @@ if ( ! function_exists( 'birder_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function birder_setup() {
+function biwako_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on birder, use a find and replace
-	 * to change 'birder' to the name of your theme in all the template files.
+	 * If you're building a theme based on biwako, use a find and replace
+	 * to change 'biwako' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'birder', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'biwako', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -49,10 +49,10 @@ function birder_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'header' => __( 'Main menu on header', 'birder' ),
-		'footer' => __( 'Sub menu on footer', 'birder' ),
-		'SNS_on_profile' => __( 'SNS list on profile section', 'birder' ),
-		'SNS_on_footer'  => __( 'SNS list on footer section', 'birder' ),
+		'header' => __( 'Main menu on header', 'biwako' ),
+		'footer' => __( 'Sub menu on footer', 'biwako' ),
+		'SNS_on_profile' => __( 'SNS list on profile section', 'biwako' ),
+		'SNS_on_footer'  => __( 'SNS list on footer section', 'biwako' ),
 	) );
 
 	/*
@@ -80,13 +80,13 @@ function birder_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'birder_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'biwako_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
 endif;
-add_action( 'after_setup_theme', 'birder_setup' );
+add_action( 'after_setup_theme', 'biwako_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -95,63 +95,63 @@ add_action( 'after_setup_theme', 'birder_setup' );
  *
  * @global int $content_width
  */
-function birder_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'birder_content_width', 640 );
+function biwako_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'biwako_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'birder_content_width', 0 );
+add_action( 'after_setup_theme', 'biwako_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function birder_widgets_init() {
+function biwako_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Widget Area', 'birder' ),
+		'name'          => esc_html__( 'Widget Area', 'biwako' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'birder' ),
+		'description'   => esc_html__( 'Add widgets here.', 'biwako' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'birder_widgets_init' );
+add_action( 'widgets_init', 'biwako_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function birder_scripts() {
+function biwako_scripts() {
 	wp_enqueue_style( 'open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&subset=latin%2Clatin-ext', array() );
 
-	wp_enqueue_style( 'birder-style', get_stylesheet_uri(), array( 'open-sans' ) );
+	wp_enqueue_style( 'biwako-style', get_stylesheet_uri(), array( 'open-sans' ) );
 
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/js/lib/genericons/genericons.css', array( 'birder-style' ), '3.4.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/js/lib/genericons/genericons.css', array( 'biwako-style' ), '3.4.1' );
 
-	wp_enqueue_script( 'birder-script', get_template_directory_uri() . '/js/index.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'biwako-script', get_template_directory_uri() . '/js/index.js', array( 'jquery' ), '', true );
 
-	wp_enqueue_script( 'birder-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
+	wp_enqueue_script( 'biwako-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'birder_scripts' );
+add_action( 'wp_enqueue_scripts', 'biwako_scripts' );
 
 /**
  *
  * @see add_action('customize_preview_init',$func)
  */
-function birder_customizer_live_preview() {
+function biwako_customizer_live_preview() {
 	 wp_enqueue_script(
-		'birder-themecustomizer',
-		get_template_directory_uri() . '/js/birder-customizer.js',
+		'biwako-themecustomizer',
+		get_template_directory_uri() . '/js/biwako-customizer.js',
 		array( 'jquery','customize-preview' ),
 		'',
 		true
 	 );
 }
-add_action( 'customize_preview_init', 'birder_customizer_live_preview' );
+add_action( 'customize_preview_init', 'biwako_customizer_live_preview' );
 
 /**
  * Implement the Custom Header feature.

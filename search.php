@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package birder
+ * @package biwako
  */
 
 get_header(); ?>
@@ -18,8 +18,8 @@ get_header(); ?>
 				<h1 class="page-title">
 					<?php
 						printf(
-							esc_html__( 'Search Results for: %s', 'birder' ),
-							'<span>' . get_search_query() . '</span>' . birder_get_current_posts_num_text()
+							esc_html__( 'Search Results for: %s', 'biwako' ),
+							'<span>' . get_search_query() . '</span>' . biwako_get_current_posts_num_text()
 						);
 					?>
 				</h1>
@@ -37,7 +37,7 @@ get_header(); ?>
 				<?php endwhile; ?>
 			</div><!-- #articles -->
 
-			<?php birder_the_posts_navigation(); ?>
+			<?php biwako_the_posts_navigation(); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>

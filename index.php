@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package birder
+ * @package biwako
  */
 
 get_header(); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 					endwhile;
 				?>
 			</div><!-- #articles -->
-			<?php birder_the_posts_navigation(); ?>
+			<?php biwako_the_posts_navigation(); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>

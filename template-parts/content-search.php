@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package birder
+ * @package biwako
  */
 
 ?>
@@ -14,7 +14,7 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta text-center">
-			<?php birder_posted_on(); ?>
+			<?php biwako_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 

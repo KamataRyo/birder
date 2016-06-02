@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package birder
+ * @package biwako
  */
 
 ?>
@@ -19,7 +19,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'birder' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'biwako' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -30,7 +30,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'birder' ),
+					esc_html__( 'Edit %s', 'biwako' ),
 					the_title( '<span class="sr-only">"', '"</span>', false )
 				),
 				'<span class="edit-link">',

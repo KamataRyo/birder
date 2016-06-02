@@ -1,4 +1,4 @@
-=== birder ===
+=== biwako ===
 
 Contributors: KamataRyo
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
@@ -9,15 +9,15 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called birder, or underscores.
+A starter theme called biwako, or underscores.
 
 == Description ==
 
-Hi. I'm a starter theme called birder, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Hi. I'm a starter theme called biwako, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
 == filters ==
 
-'birder_get_post_taxonomies'
+'biwako_get_post_taxonomies'
 @inc/template-tags.php
 accept taxonomies name as array, allow to alter taxonomies list shown behind post
 
@@ -31,7 +31,7 @@ accept taxonomies name as array, allow to alter taxonomies list shown behind pos
 
 = Does this theme support any plugins? =
 
-birder includes support for Infinite Scroll in Jetpack.
+biwako includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

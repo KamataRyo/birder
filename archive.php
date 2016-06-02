@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package birder
+ * @package biwako
  */
 get_header(); ?>
 
@@ -17,7 +17,7 @@ get_header(); ?>
 				<?php
 					the_archive_title(
 						'<h1 class="page-title text-center">',
-						birder_get_current_posts_num_text() . '</h1>'
+						biwako_get_current_posts_num_text() . '</h1>'
 					);
 					the_archive_description(
 						'<div class="taxonomy-description">',
@@ -38,7 +38,7 @@ get_header(); ?>
 					endwhile;
 				?>
 			</div><!-- #articles -->
-			<?php birder_the_posts_navigation(); ?>
+			<?php biwako_the_posts_navigation(); ?>
 
 		<?php else :  ?>
 			<?php get_template_part( 'template-parts/content', 'none' );  ?>

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package birder
+ * @package biwako
  */
 
 ?><!DOCTYPE html>
@@ -21,13 +21,13 @@
 
 	<body <?php body_class(); ?>>
 		<div id="page" class="site">
-			<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'birder' ); ?></a>
+			<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'biwako' ); ?></a>
 
 			<header id="masthead" role="banner container">
 				<?php if ( has_nav_menu( 'header' ) ) : ?>
 					<nav id="primary-navigation" class="navgigation" role="navigation">
 						<div class="container--toggle-menu text-right">
-							<a class="toggle-menu" data-target="#header-menu"><span class="screen-reader-text"><?php _e( 'Skip to content', 'birder' ); ?></span></a>
+							<a class="toggle-menu" data-target="#header-menu"><span class="screen-reader-text"><?php _e( 'Skip to content', 'biwako' ); ?></span></a>
 						</div>
 						<?php
 							wp_nav_menu( array(

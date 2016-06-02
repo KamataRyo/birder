@@ -1,8 +1,8 @@
 <?php
 /**
- * birder Theme Customizer.
+ * biwako Theme Customizer.
  *
- * @package birder
+ * @package biwako
  */
 
 /**
@@ -10,29 +10,29 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function birder_customize_register( $wp_customize ) {
+function biwako_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
-add_action( 'customize_register', 'birder_customize_register' );
+add_action( 'customize_register', 'biwako_customize_register' );
 
 /**
  * Add other customizing terms.
  */
-function birder_customize_register_general( $wp_customize ) {
+function biwako_customize_register_general( $wp_customize ) {
 
 	$wp_customize->add_section(
 		'privacy_settings',
 		array(
-			'title'    => __( 'Privacy Settings', 'birder' ),
+			'title'    => __( 'Privacy Settings', 'biwako' ),
 			'priority' => 0,
 		)
 	);
 
 	$users = get_users( array( 'fields' => array( 'ID', 'display_name' ) ) );
 	$default = $users[0]->ID;
-	$choices = array( -1 => __('- No Display -', 'birder' ) );
+	$choices = array( -1 => __('- No Display -', 'biwako' ) );
 	foreach ( $users as $user ) {
 		$choices[$user->ID] = $user->display_name;
 	}
@@ -42,8 +42,8 @@ function birder_customize_register_general( $wp_customize ) {
 			$wp_customize,
 			'display_profile_at_footer',
 			array(
-				'label'       => __( 'Representative at footer', 'birder' ),
-				'description' => __( 'This term determines whose profile to display on footer as representative. You may also need to update menus and to alter the SNS links for new one.', 'birder' ),
+				'label'       => __( 'Representative at footer', 'biwako' ),
+				'description' => __( 'This term determines whose profile to display on footer as representative. You may also need to update menus and to alter the SNS links for new one.', 'biwako' ),
 				'section'     => 'privacy_settings',
 				'settings'    => 'display_profile_at_footer',
 				'type'        => 'select',
@@ -58,14 +58,14 @@ function birder_customize_register_general( $wp_customize ) {
 			$wp_customize,
 			'display_author_on_posts',
 			array(
-				'label'       => __( "Display post's author", 'birder' ),
-				'description' => __( 'This term determines whether display authors name on post header or not.', 'birder' ),
+				'label'       => __( "Display post's author", 'biwako' ),
+				'description' => __( 'This term determines whether display authors name on post header or not.', 'biwako' ),
 				'section'     => 'privacy_settings',
 				'settings'    => 'display_author_on_posts',
 				'type'        => 'radio',
 				'choices'     => array(
-					'1' => _x( 'Yes', 'whether display author name on post or not', 'birder' ),
-					'0' => _x( 'No', 'whether display author name on post or not', 'birder' ),
+					'1' => _x( 'Yes', 'whether display author name on post or not', 'biwako' ),
+					'0' => _x( 'No', 'whether display author name on post or not', 'biwako' ),
 				),
 			)
 		)
@@ -84,7 +84,7 @@ function birder_customize_register_general( $wp_customize ) {
 			$wp_customize,
 			'text_color',
 			array(
-				'label'    => __( "Text Color", 'birder' ),
+				'label'    => __( "Text Color", 'biwako' ),
 				'section'  => 'colors',
 				'settings' => 'text_color',
 			)
@@ -104,7 +104,7 @@ function birder_customize_register_general( $wp_customize ) {
 			$wp_customize,
 			'link_color',
 			array(
-				'label'    => __( "Link Color", 'birder' ),
+				'label'    => __( "Link Color", 'biwako' ),
 				'section'  => 'colors',
 				'settings' => 'link_color',
 			)
@@ -124,7 +124,7 @@ function birder_customize_register_general( $wp_customize ) {
 			$wp_customize,
 			'footer_background_color',
 			array(
-				'label'    => __( "Footer Background Color", 'birder' ),
+				'label'    => __( "Footer Background Color", 'biwako' ),
 				'section'  => 'colors',
 				'settings' => 'footer_background_color',
 			)
@@ -133,9 +133,9 @@ function birder_customize_register_general( $wp_customize ) {
 
 
 }
-add_action( 'customize_register', 'birder_customize_register_general' );
+add_action( 'customize_register', 'biwako_customize_register_general' );
 
-function birder_customize_css() {
+function biwako_customize_css() {
 	?>
 		<style type="text/css">
 			body,
@@ -155,12 +155,12 @@ function birder_customize_css() {
 		</style>
 	<?php
 }
-add_action( 'wp_head', 'birder_customize_css');
+add_action( 'wp_head', 'biwako_customize_css');
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function birder_customize_preview_js() {
-	wp_enqueue_script( 'birder_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function biwako_customize_preview_js() {
+	wp_enqueue_script( 'biwako_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'birder_customize_preview_js' );
+add_action( 'customize_preview_init', 'biwako_customize_preview_js' );
