@@ -29,7 +29,7 @@ function birder_posted_on() {
 	}
 
 	// display posted-on on post
-	echo '<span class="posted-on">' .
+	echo '<span class="posted-on entry-meta--element">' .
 		'<span class="screen-reader-text">' . __( 'posting date', 'birder' ) . '</span>' .
         sprintf( $time_string_format,
     		esc_attr( get_the_date( 'c' ) ),
@@ -41,7 +41,7 @@ function birder_posted_on() {
 
 	// display author name on post
 	if ( get_theme_mod( 'display_author_on_posts' ) ) {
-		echo '<span class="posted-by">' .
+		echo '<span class="posted-by entry-meta--element">' .
 			'<span class="screen-reader-text">' . __( 'post author', 'birder' ) . '</span>' .
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .
 					esc_html( get_the_author() ) .
@@ -54,7 +54,7 @@ function birder_posted_on() {
 			esc_html_x( 'Edit %s', 'post-edit-link', 'birder' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		'<span class="edit-link">',
+		'<span class="edit-link entry-meta--element">',
 		'</span>'
 	);
 }
@@ -154,8 +154,8 @@ if ( ! function_exists( 'birder_the_post_navigation' ) ) :
  */
 function birder_the_post_navigation() {
 	the_post_navigation( array(
-		'prev_text' => '%title',
-		'next_text' => '%title'
+		'prev_text' => __( 'the older post', 'birder' ),
+		'next_text' => __( 'the newer post', 'birder' )
 	) );
 }
 endif;

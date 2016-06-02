@@ -26,7 +26,7 @@
 									wp_nav_menu( array(
 										'theme_location' => 'footer',
 										'menu_id'        => 'footer-menu',
-										'menu_class'     => 'footer-nav list-inline text-center',
+										'menu_class'     => 'footer-nav list-inline list-valign-xs text-center',
 										'depth'          => 1,
 									) );
 								?>

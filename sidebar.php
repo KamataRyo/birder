@@ -7,7 +7,7 @@
  * @package birder
  */
 ?>
-</div><!--#content-->
+</div><!--#content.container-->
 
 <div id="secondary">
 	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>

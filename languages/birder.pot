@@ -158,12 +158,35 @@ msgstr ""
 msgid "Newer posts"
 msgstr ""
 
+#: inc/template-tags.php:157
+msgid "the older post"
+msgstr ""
+
+#: inc/template-tags.php:158
+msgid "the newer post"
+msgstr ""
+
 #: inc/template-tags.php:172
 msgid "Profile"
 msgstr ""
 
 #: search.php:21
 msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:4
+msgctxt "placeholder"
+msgid "Search …"
+msgstr ""
+
+#: searchform.php:4
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:6
+msgctxt "submit button"
+msgid "Search"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -182,7 +205,7 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:22, template-parts/content.php:49
+#: template-parts/content-page.php:22, template-parts/content.php:57
 msgid "Pages:"
 msgstr ""
 
@@ -190,6 +213,10 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: template-parts/content.php:44
+#: template-parts/content.php:39
+msgid "(No Title)"
+msgstr ""
+
+#: template-parts/content.php:52
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

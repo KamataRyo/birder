@@ -26,10 +26,18 @@
 		endif; ?>
 
 		<?php
-			if ( is_single() ) {
+			$title = get_the_title();
+			if ( is_single() && '' !== $title  ) {
 				the_title( '<h1 class="entry-title text-center">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			}
+			if ( ! is_single() ) {
+				// show sticky only in index
+				$sticky = is_sticky() && ! is_archive() ?
+					'<span class="genericon genericon-pinned genericon-reset"></span>' :
+					'';
+
+				$title = ( '' === $title ) ? __( '(No Title)', 'birder' ) : $title;
+				echo '<h2 class="entry-title text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $title . '</a></h2>';
 			}
 		?>
 
@@ -46,8 +54,8 @@
 				) );
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'birder' ),
-					'after'  => '</div>',
+					'before' => '<div class="page-links text-center">' . esc_html__( 'Pages:', 'birder' ),
+					'after'  => '</div>'
 				) );
 			?>
 		</div><!-- .entry-content -->

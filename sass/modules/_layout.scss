@@ -1,9 +1,24 @@
-$margin-width: 1em;
-
 .container {
-	margin: $margin-width;
+
+	margin: auto;
+	//
+	// @media (min-width: $break-width1) {
+	//   max-width: 400px;
+	// }
+	// @media (min-width: $break-width2) {
+	//   width: 600px;
+	// }
+	// @media (min-width: $break-width3) {
+	//   width: 800px;
+	// }
 }
 
+#secondary {
+	padding-top: 1em;
+}
+
+
+// fallback for customizer
 #secondary {
 	background-color: #d4ecee;
 }

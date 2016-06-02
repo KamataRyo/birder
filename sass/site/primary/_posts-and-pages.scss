@@ -19,9 +19,10 @@
 .posted-on {
 	&:before {
 		content: '\f303';
-		@include font-size(1.5);
+		@include font-size(1.4);
 		vertical-align: -6px;
 		font-family: 'Genericons';
+		margin-right: .1em;
 	}
 }
 .posted-by {
@@ -30,22 +31,41 @@
 		@include font-size(1.5);
 		vertical-align: -5px;
 		font-family: 'Genericons';
+		margin-right: .1em;
 	}
 }
 .edit-link {
 	&:before {
 		content: '\f445';
-		@include font-size(1.5);
-		vertical-align: -5px;
+		@include font-size(1.2);
+		vertical-align: -3px;
 		font-family: 'Genericons';
+		margin-right: .2em;
 	}
 }
-
 
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 5em 0 3em;
+	overflow: auto;
+}
+
+.entry-content {
+	thead tr, tfoot tr {
+		border-top:2px solid #666;
+		border-bottom:2px solid #666;
+	}
+
+	tbody tr {
+		&:first-child {
+			border-top:2px solid #666;
+		}
+		border-bottom: 1px solid #666;
+		&:last-child {
+			border-bottom:2px solid #666;
+		}
+	}
 }
 
 .page-links {
@@ -53,7 +73,19 @@
 	margin: 0 0 1.5em;
 }
 
+
 .taxonomy-list {
 	margin-left: 0;
 	padding-left: 0;
+}
+
+.entry-meta--element {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+
+// gallery
+p.attachment {
+	text-align: center;
 }

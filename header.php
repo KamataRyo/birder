@@ -23,7 +23,7 @@
 		<div id="page" class="site">
 			<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'birder' ); ?></a>
 
-			<header id="masthead" role="banner">
+			<header id="masthead" role="banner container">
 				<?php if ( has_nav_menu( 'header' ) ) : ?>
 					<nav id="primary-navigation" class="navgigation" role="navigation">
 						<div class="container--toggle-menu text-right">
@@ -55,4 +55,4 @@
 
 			</header><!-- #masthead -->
 
-			<div id="content" class="site-content">
+			<div id="content" class="site-content container">

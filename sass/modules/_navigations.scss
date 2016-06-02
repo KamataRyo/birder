@@ -10,6 +10,9 @@
 	.nav-previous {
 		float: left;
 		width: 50%;
+		// white-space: nowrap;
+		// overflow: hidden;
+		// text-overflow: ellipsis;
 		&:before {
 			content: '\f430';
 			font-family:'Genericons';
@@ -22,6 +25,9 @@
 		float: right;
 		text-align: right;
 		width: 50%;
+		// white-space: nowrap;
+		// overflow: hidden;
+		// text-overflow: ellipsis;
 		&:after {
 			content: '\f429';
 			font-family:'Genericons';
