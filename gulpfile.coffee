@@ -5,7 +5,7 @@ rename   = require 'gulp-rename'
 coffee   = require 'gulp-coffee'
 concat   = require 'gulp-concat'
 uglify   = require 'gulp-uglify'
-compass  = require 'gulp-compass'
+sass     = require 'gulp-sass'
 minify   = require 'gulp-minify-css'
 sourcemaps = require 'gulp-sourcemaps'
 rtlcss   = require 'gulp-rtlcss'
@@ -22,11 +22,11 @@ scopes = [
     'languages/*.po'
     'sketch/**/*.sketch'
 ]
-tasks = ['coffee', 'compass', 'wpPot', 'gettext', 'sketchSS']
+tasks = ['coffee', 'sass', 'wpPot', 'gettext', 'sketchSS']
 
 src =
     coffee:   'js/**/*.coffee'
-    compass:  'sass/**/*.scss'
+    sass:  'sass/**/*.scss'
     wpPot:    '**/*.php'
     gettext:  'languages/*.po'
     sketchSS: 'sketch/screenshot.sketch'
@@ -40,14 +40,11 @@ gulp.task 'coffee', ()->
         .pipe gulp.dest './js/'
 
 
-gulp.task 'compass', ()->
-    gulp.src src['compass']
+gulp.task 'sass', ()->
+    gulp.src src['sass']
         .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
         .pipe sourcemaps.init()
-        .pipe compass
-            config_file: './config.rb',
-            css: './',
-            sass: 'sass'
+        .pipe sass()
         .pipe minify()
         .pipe gulp.dest './'
         .pipe rtlcss()
