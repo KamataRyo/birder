@@ -1,8 +1,8 @@
-# Copyright (C) 2016 birder
-# This file is distributed under the same license as the birder package.
+# Copyright (C) 2016 biwako
+# This file is distributed under the same license as the biwako package.
 msgid ""
 msgstr ""
-"Project-Id-Version: birder\n"
+"Project-Id-Version: biwako\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,27 +53,27 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:52
+#: functions.php:47
 msgid "Main menu on header"
 msgstr ""
 
-#: functions.php:53
+#: functions.php:48
 msgid "Sub menu on footer"
 msgstr ""
 
-#: functions.php:54
+#: functions.php:49
 msgid "SNS list on profile section"
 msgstr ""
 
-#: functions.php:55
+#: functions.php:50
 msgid "SNS list on footer section"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:105
 msgid "Widget Area"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:107
 msgid "Add widgets here."
 msgstr ""
 

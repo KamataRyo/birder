@@ -1,0 +1,49 @@
+sudo: false
+
+language:
+  - php
+
+php:
+  - 5.3
+  - 5.6
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+branches:
+  only:
+  - master
+  - "/^v?[0-9](\\.[0-9])*/"
+
+before_script:
+- bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+- npm cache clean
+- travis_retry npm install
+- npm run build
+
+script:
+- npm test
+- phpunit
+
+after_success:
+# - npm run generatePot
+- bash bin/deploy.sh
+
+matrix:
+  include:
+  - php: 5.6
+    env: WP_VERSION=latest WP_MULTISITE=1
+
+env:
+  matrix:
+  - WP_VERSION=latest WP_MULTISITE=0
+  - WP_VERSION=4.0 WP_MULTISITE=0
+  global:
+  - WP_VERSION_TO_DEPLOY: latest
+  - PHP_VERSION_TO_DEPLOY: 5.6
+  - WP_MULTISITE_TO_DEPLOY: 0
+  # - SVN_REPO: https://themes.svn.wordpress.org/biwako/
+  - GH_REF: github.com/KamataRyo/biwako.git
+  - secure: "b/k37CiyNPciHEzzH09DqCRnJfz6zxo080KgPMA82mCYaiTmuIA/PQjLgC7uQkaSJr9vari1YWI30weEJ43wSM18V8mq2/JAoH0EwCA5oko8CuIgF861Pmtd+0Hif/ax7wOimfOMIzG8X9WrA+kUDKwJZogeu4Rw8vXafWMcUvD/bzKITpY8+ih4KirsNsvKkdPguTQbbKJb7ScKnG+QUCyXMyHRNyly9h9FFLntqtbHyOxsINXA4DgYlS2JBv3mOgJN/h3AARL27Cv7md3U1zho76DjYD2yxH/XSyUBhUY9bsecAn8OpMXrRG7laB+QYuTqls8OavTfkgAMougV777DJteLQmqLhDGPOLTIUWJ7nTgbxXc4Wi6BxXbQyq/uJ2WFwMZc8m5U41v5FECqkyVPtTL3cDRzEH4j0LK/Osq2fdbyOD/QkdaVYCQJ8xtjUEYLAEV6ppimaJsj6E1n/HBnKSOYxOKX+mySSER9EO5OPtIcI9hqf+6/8mDFaDeb1hpc0fivSXP+emvbHs7RXmVsBapkwaSJmyN1qAbXrsDzDskOnFBK6rBticEu96Am5x/XyCZKXVQxrfHmTKck1lBBzsnzjolC9Sb5iSFkqaezqo5IgBEMcI6rdQxba6LzYWPDGtjFOd2v3MdEOc529lbHPz+qOKpfvWvesD4RtGc="

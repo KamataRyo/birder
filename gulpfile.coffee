@@ -75,11 +75,11 @@ gulp.task 'gettext', ()->
 
 gulp.task 'sketchSS', ()->
     gulp.src src['sketchSS']
-        .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
-        .pipe sketch
-            export: 'artboards'
-            formats: 'png'
-        .pipe gulp.dest './'
+        # .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
+        # .pipe sketch
+        #     export: 'artboards'
+        #     formats: 'png'
+        # .pipe gulp.dest './'
 
 
 gulp.task 'build', tasks

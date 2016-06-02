@@ -1,0 +1,26 @@
+# they are unnecessary files for deploy script and not official expression for SVN.
+
+.DS_Store
+npm-debug.log
+.sass-cache
+README.md
+bin
+sass
+sketch
+.bowerrc
+.editorconfig
+.jscsrc
+.jshintignore
+.travis.yml
+.gitignore
+.svnignore
+js/*.coffee
+config.rb
+tests
+phpunit.xml
+package.json
+node_modules
+gulpfile.js
+gulpfile.coffee
+Gruntfile.js
+Gruntfile.coffee
