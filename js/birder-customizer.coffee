@@ -43,3 +43,8 @@ wp.customize 'text_color', (value)->
 wp.customize 'link_color', (value)->
     value.bind (to)->
         $('a').css color: to
+
+# Footer Background color
+wp.customize 'footer_background_color', (value)->
+    value.bind (to)->
+        $('#secondary').css 'background-color': to

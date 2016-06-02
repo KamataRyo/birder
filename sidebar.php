@@ -7,10 +7,11 @@
  * @package birder
  */
 ?>
-<div id="secondary" class="sidebar-area">
+</div><!--#content-->
+
+<div id="secondary">
 	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-		<aside id="sidebar" class="widget-area" role="complementary">
+		<aside id="sidebar" class="widget-area container" role="complementary">
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		</aside><!-- #sidebar -->
 	<?php endif; ?>
-</div><!-- #secondary -->

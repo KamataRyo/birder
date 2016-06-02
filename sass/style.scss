@@ -27,6 +27,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Typography
 # Elements
 # Forms
+# Layout
 # Navigation
 	## Links
 	## Menus
@@ -43,10 +44,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 
-TODO
-  - header-menuはデフォルトでcollapse
 --------------------------------------------------------------*/
 $break-width1: 768px;
+
 /*--------------------------------------------------------------
 # Mixins
 --------------------------------------------------------------*/
@@ -71,6 +71,11 @@ $break-width1: 768px;
 # Forms
 --------------------------------------------------------------*/
 @import "forms/forms";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "modules/layout";
 
 /*--------------------------------------------------------------
 # Navigation

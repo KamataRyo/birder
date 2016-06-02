@@ -45,11 +45,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:56
+#: footer.php:55
 msgid "Proudly powered by %s."
 msgstr ""
 
-#: footer.php:63
+#: footer.php:62
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -121,6 +121,10 @@ msgstr ""
 
 #: inc/customizer.php:107
 msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:127
+msgid "Footer Background Color"
 msgstr ""
 
 #: inc/template-tags.php:14

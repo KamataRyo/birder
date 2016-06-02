@@ -110,6 +110,28 @@ function birder_customize_register_general( $wp_customize ) {
 			)
 		)
 	);
+
+	// Footer Background Color
+	$wp_customize->add_setting(
+		'footer_background_color',
+		array(
+			'default' => '#d4ecee',
+			'transport'   => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'footer_background_color',
+			array(
+				'label'    => __( "Footer Background Color", 'birder' ),
+				'section'  => 'colors',
+				'settings' => 'footer_background_color',
+			)
+		)
+	);
+
+
 }
 add_action( 'customize_register', 'birder_customize_register_general' );
 
@@ -126,6 +148,9 @@ function birder_customize_css() {
 			}
 			a {
 				color:<?php echo get_theme_mod( 'link_color', '##21759b' ); ?>;
+			}
+			#secondary {
+				background-color: <?php echo get_theme_mod( 'footer_background_color', '#d4ecee;' ); ?>;
 			}
 		</style>
 	<?php
