@@ -10,12 +10,24 @@
 	.nav-previous {
 		float: left;
 		width: 50%;
+		&:before {
+			content: '\f430';
+			font-family:'Genericons';
+			@include font-size(1.5);
+			vertical-align: -5px;
+		}
 	}
 
 	.nav-next {
 		float: right;
 		text-align: right;
 		width: 50%;
+		&:after {
+			content: '\f429';
+			font-family:'Genericons';
+			@include font-size(1.5);
+			vertical-align: -5px;
+		}
 	}
 }
 
@@ -24,7 +36,8 @@
 
 	a:before {
 		content: '\f107';
-		font: 32px 'Genericons';
+		@include font-size(2);
+		font-family:'Genericons';
 	}
 
 	$url-genericons: (

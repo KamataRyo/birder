@@ -19,18 +19,24 @@
 .posted-on {
 	&:before {
 		content: '\f303';
+		@include font-size(1.5);
+		vertical-align: -6px;
 		font-family: 'Genericons';
 	}
 }
 .posted-by {
 	&:before {
 		content: '\f304';
+		@include font-size(1.5);
+		vertical-align: -5px;
 		font-family: 'Genericons';
 	}
 }
 .edit-link {
 	&:before {
 		content: '\f445';
+		@include font-size(1.5);
+		vertical-align: -5px;
 		font-family: 'Genericons';
 	}
 }

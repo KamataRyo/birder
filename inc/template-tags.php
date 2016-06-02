@@ -141,8 +141,8 @@ if ( ! function_exists( 'birder_the_posts_navigation' ) ) :
  */
 function birder_the_posts_navigation() {
 	the_posts_navigation( array(
-		'prev_text' => '<span class="genericon genericon-previous"></span>' . __( 'Older posts', 'birder' ),
-		'next_text' => __( 'Newer posts', 'birder' ) . '<span class="genericon genericon-next"></span>'
+		'prev_text' => __( 'Older posts', 'birder' ),
+		'next_text' => __( 'Newer posts', 'birder' )
 	) );
 }
 endif;
@@ -154,8 +154,8 @@ if ( ! function_exists( 'birder_the_post_navigation' ) ) :
  */
 function birder_the_post_navigation() {
 	the_post_navigation( array(
-		'prev_text' => '<span class="genericon genericon-previous"></span>%title',
-		'next_text' => '%title<span class="genericon genericon-next"></span>'
+		'prev_text' => '%title',
+		'next_text' => '%title'
 	) );
 }
 endif;
