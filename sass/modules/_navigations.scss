@@ -69,13 +69,14 @@
 	}
 }
 
+.container--toggle-menu {
+	display: block;
+}
+
 .toggle-menu {
 	@media screen and (min-width: $break-width1) {
 		display: none;
 	}
-	position: absolute;
-	right: 0;
-	top: 0;
 	padding: 1em;
 	&:before {
 		content: "\f419";

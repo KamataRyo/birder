@@ -1,4 +1,5 @@
 $ = jQuery
+
 $('.toggle-menu').click ->
     $target = $ $(this).data('target')
     unless $target.hasClass 'collapsible' then return
@@ -9,7 +10,7 @@ $('.toggle-menu').click ->
         $target.addClass 'collapsed'
 
 
-$(window).resize (a1, a2) ->
+toggleWithWidth = ->
     $target = $ $('.toggle-menu').data('target')
     unless $target.hasClass 'collapsible' then return
 
@@ -17,3 +18,8 @@ $(window).resize (a1, a2) ->
         $target.removeClass 'collapsed'
     if $(window).width() < 768 and ! $target.hasClass 'collapsed'
         $target.addClass 'collapsed'
+
+# judge at first
+toggleWithWidth()
+
+$(window).resize toggleWithWidth

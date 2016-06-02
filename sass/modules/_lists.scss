@@ -3,8 +3,29 @@
   margin-left: -5px;
   list-style: none;
 }
+
 .list-inline > li {
   display: inline-block;
   padding-right: 5px;
   padding-left: 5px;
+}
+
+// keep more specificity than .text-center
+.list-inline.list-valign-xs {
+	@media screen and (max-width: $break-width1 - 1 ) {
+		&:not(.collapsed) li {
+			padding: 0;
+			@include font-size(1.2);
+			margin: .5em 0;
+			display: block;
+		}
+		margin: 1em;
+		text-align: left;
+	}
+}
+
+.header-menu {
+	@media screen and (min-width: $break-width1 ) {
+		margin: 1em;
+	}
 }

@@ -87,8 +87,14 @@ a {
 }
 
 a.toggle-menu {
+    @include font-size(1.2);
+    line-height: 1.6;
     color: $color--text;
-    &:hover {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        border-bottom: none;
         cursor: pointer;
     }
 }

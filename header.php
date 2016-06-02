@@ -21,23 +21,19 @@
 
 	<body <?php body_class(); ?>>
 		<div id="page" class="site">
-			<a class="skip-link screen-reader-text" href="#main">
-				<?php _e( 'Skip to content', 'birder' ); ?>
-			</a>
+			<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'birder' ); ?></a>
 
 			<header id="masthead" role="banner">
 				<?php if ( has_nav_menu( 'header' ) ) : ?>
 					<nav id="primary-navigation" class="navgigation" role="navigation">
-						<a class="toggle-menu" data-target="#header-menu">
-							<span class="screen-reader-text">
-								<?php _e( 'Skip to content', 'birder' ); ?>
-							</span>
-						</a>
+						<div class="container--toggle-menu text-right">
+							<a class="toggle-menu" data-target="#header-menu"><span class="screen-reader-text"><?php _e( 'Skip to content', 'birder' ); ?></span></a>
+						</div>
 						<?php
 							wp_nav_menu( array(
 								'theme_location'  => 'header',
 								'menu_id'         => 'header-menu',
-								'menu_class'      => 'collapsible list-inline text-right',
+								'menu_class'      => 'header-menu collapsible list-inline list-valign-xs text-right collapsed',
 								'depth'           => 1,
 							) );
 						?>
