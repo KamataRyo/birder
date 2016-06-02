@@ -4,6 +4,8 @@
   "description": "This is my wordpress theme",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/gulp build",
+    "install": "npm run build"
   },
   "repository": {
     "type": "git",

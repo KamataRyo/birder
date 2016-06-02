@@ -44,11 +44,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
-
+TODO
+  - カスタマイザーで、ヘッダ文字色とリンク色が両方設定されてしまうのを直す
+  - comment-areaのスタイリング
+  - searchformのスタイリング
+  - navbarを折りたたむ下記のデフォルト値をmustasheか何かでテンプレート化する
+  - customizerのデフォルト値をテンプレート化する
+  - タスクランナーのタスク整理
+  - 翻訳タスクの設定,またはGlotPressの準備
+  - rtl生成タスクのdest名を変更し、正しく機能しているか確認
+  -
 --------------------------------------------------------------*/
 $break-width1: 768px;
-$break-width2: 960px;
-$break-width3: 1080px;
 /*--------------------------------------------------------------
 # Mixins
 --------------------------------------------------------------*/

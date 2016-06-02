@@ -52,7 +52,7 @@ function biwako_customize_register_general( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting( 'display_author_on_posts', array( 'default' => '1' ) );
+	$wp_customize->add_setting( 'display_author_on_posts', array( 'default' => '0' ) );
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,

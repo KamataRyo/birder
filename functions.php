@@ -7,11 +7,6 @@
  * @package biwako
  */
 
-/**
- * custom waler to apply nav_menu to Bootstrap
- */
-require_once get_template_directory() . '/vender/twittem/wp_bootstrap_navwalker/wp_bootstrap_navwalker.php';
-
 if ( ! function_exists( 'biwako_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

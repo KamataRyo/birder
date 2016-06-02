@@ -1,20 +1,14 @@
-.container {
-
+#content,
+#sidebar,
+#colophon {
+	max-width: $break-width1;
+	padding: 1em;
 	margin: auto;
-	//
-	// @media (min-width: $break-width1) {
-	//   max-width: 400px;
-	// }
-	// @media (min-width: $break-width2) {
-	//   width: 600px;
-	// }
-	// @media (min-width: $break-width3) {
-	//   width: 800px;
-	// }
 }
 
 #secondary {
 	padding-top: 1em;
+	border-top: 1px solid #ddd;
 }
 
 

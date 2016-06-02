@@ -82,8 +82,9 @@ gulp.task 'sketchSS', ()->
         .pipe gulp.dest './'
 
 
+gulp.task 'build', tasks
 
-gulp.task 'watch',tasks , ()->
+gulp.task 'watch', tasks, ()->
     gulp.watch scopes, tasks
 
-gulp.task 'default', tasks.concat('watch')
+gulp.task 'default', tasks.concat 'watch'

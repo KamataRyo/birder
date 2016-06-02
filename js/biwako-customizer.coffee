@@ -21,16 +21,16 @@ wp.customize 'blogdescription', (value)->
 wp.customize 'header_textcolor', (value)->
     value.bind (to)->
         if 'blank' is to
-            $('.site-title a, .site-description').css {
+            $('.site-description').css {
                 clip: 'rect(1px, 1px, 1px, 1px)'
                 position: 'absolute'
             }
         else
-            $('.site-title a, .site-description').css {
+            $('.site-description').css {
                 clip: 'auto',
                 position: 'relative'
             }
-            $('.site-title a, .site-description').css {
+            $('.site-description').css {
                 color: to
             }
 

@@ -7,9 +7,12 @@
 	margin: 1em;
 	padding: 2em 0;
 	border-top: solid 1px #ddd;
-	&:last-child {
-		border-bottom: solid 1px #ddd;
+	&:first-child {
+		border-top: none;
 	}
+	// &:last-child {
+	// 	border-bottom: solid 1px #ddd;
+	// }
 }
 
 .updated:not(.published){
