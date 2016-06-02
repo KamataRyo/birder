@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/gulp build",
-    "install": "npm run build"
+    "install": "npm run build",
+    "test": "ls ./js/*.js; ls ./style.css"
   },
   "repository": {
     "type": "git",
