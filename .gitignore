@@ -1,12 +1,14 @@
 style.css
-style-rtl.css
+rtl.css
 npm-debug.log
 
 node_modules/
 .DS_Store
 .sass-cache/
 
-# languages/*.pot
+languages/*.mo
+
+README.md
 
 vender
 

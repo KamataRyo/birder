@@ -12,7 +12,6 @@ rtlcss   = require 'gulp-rtlcss'
 sort     = require 'gulp-sort'
 wpPot    = require 'gulp-wp-pot'
 gettext  = require 'gulp-gettext'
-sketch   = require 'gulp-sketch'
 meta     = require './package.json'
 
 scopes = [
@@ -20,16 +19,15 @@ scopes = [
     'sass/**/*.scss'
     '**/*.php'
     'languages/*.po'
-    'sketch/**/*.sketch'
 ]
-tasks = ['coffee', 'sass', 'wpPot', 'gettext', 'sketchSS']
+
+tasks = ['coffee', 'sass', 'wpPot', 'gettext']
 
 src =
     coffee:   'js/**/*.coffee'
     sass:  'sass/**/*.scss'
     wpPot:    '**/*.php'
     gettext:  'languages/*.po'
-    sketchSS: 'sketch/screenshot.sketch'
 
 gulp.task 'coffee', ()->
     gulp.src src['coffee']
@@ -48,7 +46,7 @@ gulp.task 'sass', ()->
         .pipe minify()
         .pipe gulp.dest './'
         .pipe rtlcss()
-        .pipe rename suffix:'-rtl'
+        .pipe rename 'rtl.css'
         .pipe sourcemaps.write()
         .pipe gulp.dest './'
 
@@ -68,16 +66,6 @@ gulp.task 'gettext', ()->
         .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
         .pipe gettext()
         .pipe gulp.dest './languages'
-
-
-gulp.task 'sketchSS', ()->
-    gulp.src src['sketchSS']
-        # .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
-        # .pipe sketch
-        #     export: 'artboards'
-        #     formats: 'png'
-        # .pipe gulp.dest './'
-
 
 gulp.task 'build', tasks
 
