@@ -7,7 +7,7 @@
 ./node_modules/.bin/bower install
 
 # Generate README.md for github
-./node_modules/.bin/grunt readme
+./node_modules/grunt/lib readme
 
 # generate mo
-./node_modules/.bin/grunt i18n
+./node_modules/grunt/lib i18n
