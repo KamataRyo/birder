@@ -6,10 +6,9 @@
 # Download library
 ./node_modules/.bin/bower install
 
-ls -la ./node_modules/grunt/lib/grunt
-
+# temporary use global module
 # Generate README.md for github
-./node_modules/grunt/lib/grunt readme
+grunt readme
 
 # generate mo
-./node_modules/grunt/lib/grunt i18n
+grunt i18n
