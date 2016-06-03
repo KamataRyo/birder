@@ -42,7 +42,7 @@ function biwako_customize_register_general( $wp_customize ) {
 			$wp_customize,
 			'display_profile_at_footer',
 			array(
-				'label'       => __( 'Representative at footer', 'biwako' ),
+				'label'       => __( 'Representative profile at footer', 'biwako' ),
 				'description' => __( 'This term determines whose profile to display on footer as representative. You may also need to update menus and to alter the SNS links for new one.', 'biwako' ),
 				'section'     => 'privacy_settings',
 				'settings'    => 'display_profile_at_footer',

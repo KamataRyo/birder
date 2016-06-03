@@ -53,19 +53,19 @@ gulp.task 'sass', ()->
 
 gulp.task 'wpPot', ()->
     gulp.src src['wpPot']
-        .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
-        .pipe sort()
-        .pipe wpPot
-            domain: meta.name
-            destFile: "#{meta.name}.pot"
-        .pipe gulp.dest './languages'
+#         .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
+#         .pipe sort()
+#         .pipe wpPot
+#             domain: meta.name
+#             destFile: "#{meta.name}.pot"
+#         .pipe gulp.dest './languages'
 
 
 gulp.task 'gettext', ()->
     gulp.src src['gettext']
         .pipe plumber(errorHandler: notify.onError '<%= error.message %>')
         .pipe gettext()
-        .pipe gulp.dest './languages'
+        .pipe gulp.dest './languages/'
 
 gulp.task 'build', tasks
 
