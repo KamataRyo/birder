@@ -121,7 +121,7 @@ function biwako_scripts() {
 
 	wp_enqueue_style( 'biwako-style', get_stylesheet_uri(), array( 'open-sans' ) );
 
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/js/lib/genericons/genericons.css', array( 'biwako-style' ), '3.4.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/js/lib/Genericons/genericons.css', array( 'biwako-style' ), '3.4.1' );
 
 	wp_enqueue_script( 'biwako-script', get_template_directory_uri() . '/js/index.js', array( 'jquery' ), '', true );
 
