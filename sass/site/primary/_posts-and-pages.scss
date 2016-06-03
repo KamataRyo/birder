@@ -10,9 +10,6 @@
 	&:first-child {
 		border-top: none;
 	}
-	// &:last-child {
-	// 	border-bottom: solid 1px #ddd;
-	// }
 }
 
 .updated:not(.published){
@@ -86,7 +83,6 @@
 	margin-left: .5em;
 	margin-right: .5em;
 }
-
 
 // gallery
 p.attachment {

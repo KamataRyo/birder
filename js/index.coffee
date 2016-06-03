@@ -1,7 +1,8 @@
 $ = jQuery
-windowWidthBefore = $(window).width()
+windowWidthBefore = 0
 
-$('.toggle-menu').click ->
+# click event
+$('.toggle-menu').on 'mousedown', ->
     $target = $ $(this).data('target')
     unless $target.hasClass 'collapsible' then return
 
