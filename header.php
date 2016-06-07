@@ -24,7 +24,7 @@
 			<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'biwako' ); ?></a>
 
 			<header id="masthead" role="banner container">
-				
+
 				<div id="site-branding">
 					<?php if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -54,7 +54,15 @@
 					</nav><!-- primary-navigation -->
 				<?php endif; ?>
 
-				<div id="header-belt"></div><!-- #header-belt -->
+				<div id="header-belt">
+					<img
+						src="<?php header_image(); ?>"
+						style="
+						max-width: <?php echo esc_attr( get_custom_header()->width ); ?>px;
+						max-height: <?php echo esc_attr( get_custom_header()->height ); ?>px;"
+						alt=""
+					 >
+				</div><!-- #header-belt -->
 
 			</header><!-- #masthead -->
 

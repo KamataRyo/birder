@@ -25,7 +25,7 @@ function biwako_custom_header_setup() {
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1920,
-		'height'                 => 600,
+		'height'                 => 300,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'biwako_header_style',
 	) ) );
@@ -68,11 +68,6 @@ function biwako_header_style() {
 		.site-title a,
 		.site-description {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
-		}
-		#header-belt {
-			background-image: url(<?php header_image(); ?>);
-			background-position: center center;
-			background-repeat: no-repeat;
 		}
 	<?php endif; ?>
 	</style>
