@@ -8,6 +8,7 @@ bin
 sass
 sketch
 .bowerrc
+.bower.json
 .editorconfig
 .jscsrc
 .jshintignore
