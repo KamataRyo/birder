@@ -24,6 +24,20 @@
 			<a class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to content', 'biwako' ); ?></a>
 
 			<header id="masthead" role="banner container">
+				
+				<div id="site-branding">
+					<?php if ( is_front_page() && is_home() ) : ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php else : ?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php endif;
+
+					$description = get_bloginfo( 'description', 'display' );
+					if ( $description || is_customize_preview() ) : ?>
+						<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+					<?php endif; ?>
+				</div>
+
 				<?php if ( has_nav_menu( 'header' ) ) : ?>
 					<nav id="primary-navigation" class="navgigation" role="navigation">
 						<div class="container--toggle-menu text-right">
@@ -40,18 +54,7 @@
 					</nav><!-- primary-navigation -->
 				<?php endif; ?>
 
-				<div id="header-belt" class="site-branding">
-					<?php if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title text-center"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else : ?>
-						<p class="site-title text-center"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php endif;
-
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description text-center"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-					<?php endif; ?>
-				</div><!-- .site-branding -->
+				<div id="header-belt"></div><!-- #header-belt -->
 
 			</header><!-- #masthead -->
 
