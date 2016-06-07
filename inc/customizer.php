@@ -144,13 +144,16 @@ function biwako_customize_css() {
 			select,
 			textarea,
 			a.toggle-menu {
-				color:<?php echo get_theme_mod( 'text_color', '#333' ); ?>
+				color:<?php echo esc_attr( get_theme_mod( 'text_color', '#333' ) ); ?>
 			}
 			a {
-				color:<?php echo get_theme_mod( 'link_color', '##21759b' ); ?>;
+				color:<?php echo esc_attr( get_theme_mod( 'link_color', '##21759b' ) ); ?>;
+			}
+			.site-title a {
+				color: #<?php echo esc_attr( get_header_textcolor() ); ?>;
 			}
 			#secondary {
-				background-color: <?php echo get_theme_mod( 'footer_background_color', '#d4ecee;' ); ?>;
+				background-color: <?php echo esc_attr( get_theme_mod( 'footer_background_color', '#d4ecee;' ) ); ?>;
 			}
 		</style>
 	<?php

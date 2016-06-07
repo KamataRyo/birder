@@ -6,6 +6,16 @@
 	margin: auto;
 }
 
+#header-belt {
+	height: 300px;
+	background-color: -webkit-linear-gradient(rgba(20,30,40,.6), opacify(lighten(#21759b,20%),.5), opacify(#d4ecee,.5));
+	// url(http://www.webcreatorbox.com/sample/images/bg-cherrybrossam.jpg);
+	background: -o-linear-gradient(opacify(#d4ecee,.5), opacify(lighten(#21759b,20%),.5), opacify(#d4ecee,.5));
+	// url(http://www.webcreatorbox.com/sample/images/bg-cherrybrossam.jpg);
+	background: linear-gradient(opacify(#d4ecee,.5), opacify(lighten(#21759b,20%),.5), opacify(#d4ecee,.5));
+	// url(http://www.webcreatorbox.com/sample/images/bg-cherrybrossam.jpg);
+}
+
 #secondary {
 	padding-top: 1em;
 	border-top: 1px solid #ddd;

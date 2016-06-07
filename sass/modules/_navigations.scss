@@ -88,6 +88,12 @@
 	}
 }
 
+.header-menu {
+	@media screen and (min-width: $break-width1 ) {
+		margin: 1em;
+	}
+}
+
 .container--toggle-menu {
 	display: block;
 }
@@ -96,7 +102,8 @@
 	@media screen and (min-width: $break-width1) {
 		display: none;
 	}
-	padding: 1em;
+	display: block;
+	margin: 1em;
 	&:before {
 		content: "\f419";
 		font-family: 'Genericons';

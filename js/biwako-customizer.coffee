@@ -21,16 +21,16 @@ wp.customize 'blogdescription', (value)->
 wp.customize 'header_textcolor', (value)->
     value.bind (to)->
         if 'blank' is to
-            $('.site-description').css {
+            $('.site-title a, .site-description').css {
                 clip: 'rect(1px, 1px, 1px, 1px)'
                 position: 'absolute'
             }
         else
-            $('.site-description').css {
+            $('.site-title a, .site-description').css {
                 clip: 'auto',
                 position: 'relative'
             }
-            $('.site-description').css {
+            $('.site-title a, .site-description').css {
                 color: to
             }
 
@@ -42,7 +42,9 @@ wp.customize 'text_color', (value)->
 # Link color
 wp.customize 'link_color', (value)->
     value.bind (to)->
+        temp = $('.site-title a').css 'color'
         $('a').css color: to
+        $('.site-title a').css color:temp
 
 # Footer Background color
 wp.customize 'footer_background_color', (value)->

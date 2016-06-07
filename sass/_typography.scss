@@ -87,7 +87,7 @@ a {
 }
 
 a.toggle-menu {
-    @include font-size(1.2);
+    @include font-size(1);
     line-height: 1.6;
     color: $color--text;
     &:link,
