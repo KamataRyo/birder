@@ -22,3 +22,20 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin hover2remember() {
+	-webkit-filter:sepia(50%);
+	-moz-filter:sepia(50%);
+	-o-filter:sepia(50%);
+	-ms-filter:sepia(50%);
+	filter: sepia(50%);
+	transition: .5s;
+	-webkit-transition: .5s;
+	&:hover {
+		-webkit-filter:sepia(0);
+		-moz-filter:sepia(0);
+		-o-filter:sepia(0);
+		-ms-filter:sepia(0);
+		filter: sepia(0);
+	}
+}

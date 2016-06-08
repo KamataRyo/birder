@@ -18,6 +18,7 @@
 #header-belt {
 	display: none;
 	box-shadow: 0 0px 3px 1px rgba(0,0,0,.2);
+	@include hover2remember();
 }
 
 body.home #header-belt{
