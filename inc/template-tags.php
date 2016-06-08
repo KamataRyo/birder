@@ -30,7 +30,7 @@ function biwako_posted_on() {
 
 	// display posted-on on post
 	echo '<span class="posted-on entry-meta--element">' .
-		'<span class="screen-reader-text">' . __( 'posting date', 'biwako' ) . '</span>' .
+		'<span class="screen-reader-text">' . __( 'posted on ', 'biwako' ) . '</span>' .
         sprintf( $time_string_format,
     		esc_attr( get_the_date( 'c' ) ),
     		esc_html( get_the_date() ),
@@ -42,7 +42,7 @@ function biwako_posted_on() {
 	// display author name on post
 	if ( get_theme_mod( 'display_author_on_posts' ) ) {
 		echo '<span class="posted-by entry-meta--element">' .
-			'<span class="screen-reader-text">' . __( 'post author', 'biwako' ) . '</span>' .
+			'<span class="screen-reader-text">' . __( 'author ', 'biwako' ) . '</span>' .
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .
 					esc_html( get_the_author() ) .
 				'</a>' .

@@ -54,15 +54,18 @@
 					</nav><!-- primary-navigation -->
 				<?php endif; ?>
 
-				<div id="header-belt">
-					<img
-						src="<?php header_image(); ?>"
+				<?php if ( get_header_image() ) : ?>
+					<div
+						id="header-belt"
 						style="
-						max-width: <?php echo esc_attr( get_custom_header()->width ); ?>px;
-						max-height: <?php echo esc_attr( get_custom_header()->height ); ?>px;"
-						alt=""
-					 >
-				</div><!-- #header-belt -->
+							background-image: url(<?php header_image() ?>);
+							background-position: center center;
+							background-repeat: no-repeat;
+							height: <?php echo esc_attr( get_custom_header()->height ); ?>px;
+						"
+					>
+					</div>
+				 <?php endif; ?>
 
 			</header><!-- #masthead -->
 
