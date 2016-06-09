@@ -16,6 +16,7 @@ My wordpers theme.
 [![Build Status](https://travis-ci.org/KamataRyo/biwako.svg?branch=master)](https://travis-ci.org/KamataRyo/biwako)
 - privacy customizer
 - filter hook for taxonomies
+- one column
 
 == filters ==
 
