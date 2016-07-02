@@ -1,0 +1,265 @@
+# Copyright (C) 2016 KamataRyo
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: biwako 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/functions\n"
+"POT-Creation-Date: 2016-06-03 01:32:54+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "お探しのページは見つかりませんでした。"
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location."
+msgstr "ここには何もないようです。"
+
+#: comments.php:38 comments.php:57
+msgid "Comment navigation"
+msgstr "コメントナビゲーション"
+
+#: comments.php:40 comments.php:59
+msgid "Older Comments"
+msgstr "古いコメント"
+
+#: comments.php:41 comments.php:60
+msgid "Newer Comments"
+msgstr "新しいコメント"
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr "コメントは閉じられています。"
+
+#: footer.php:55
+msgid "Proudly powered by %s."
+msgstr ""
+
+#: footer.php:62
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:47
+msgid "Main menu on header"
+msgstr "ヘッダーにあるメインメニュー"
+
+#: functions.php:48
+msgid "Sub menu on footer"
+msgstr "フッターにあるサブメニュー"
+
+#: functions.php:49
+msgid "SNS list on profile section"
+msgstr "プロフィールセクションでのSNSリスト"
+
+#: functions.php:50
+msgid "SNS list on footer section"
+msgstr "フッターセクションでのSNSリスト"
+
+#: functions.php:105
+msgid "Widget Area"
+msgstr "ウィジェットエリア"
+
+#: functions.php:107
+msgid "Add widgets here."
+msgstr "ここにウィジェットを追加します。"
+
+#: header.php:24 header.php:30
+msgid "Skip to content"
+msgstr "コンテンツまでスキップする。"
+
+#: inc/customizer.php:28
+msgid "Privacy Settings"
+msgstr "プライバシー設定"
+
+#: inc/customizer.php:35
+msgid "- No Display -"
+msgstr "- 表示しない -"
+
+#: inc/customizer.php:45
+msgid "Representative profile at footer"
+msgstr "フッターに代表者プロフィールを表示"
+
+#: inc/customizer.php:46
+msgid ""
+"This term determines whose profile to display on footer as representative. "
+"You may also need to update menus and to alter the SNS links for new one."
+msgstr ""
+"この項目では、代表者としてのプロフィールをフッターに表示するかどうかを設定します。"
+"これを新しくした場合、メニューを更新しSNSリストを変更する必要があるかもしれません。"
+
+#: inc/customizer.php:61
+msgid "Display post's author"
+msgstr "投稿者名を表示"
+
+#: inc/customizer.php:62
+msgid "This term determines whether display authors name on post header or not."
+msgstr "この項目では、投稿のヘッダーに著者の名前を表示するかどうかを設定します。"
+
+#: inc/customizer.php:87
+msgid "Text Color"
+msgstr "テキスト色"
+
+#: inc/customizer.php:107
+msgid "Link Color"
+msgstr "リンク色"
+
+#: inc/customizer.php:127
+msgid "Footer Background Color"
+msgstr "フッター背景色"
+
+#: inc/template-tags.php:14
+msgid "(%d post)"
+msgid_plural "(%d posts)"
+msgstr[0] "%d件の投稿"
+msgstr[1] "%d件の投稿"
+
+#: inc/template-tags.php:33
+msgid "posting date"
+msgstr "投稿日時"
+
+#: inc/template-tags.php:45
+msgid "post author"
+msgstr "投稿者"
+
+#: inc/template-tags.php:131
+#. translators: %s: post title
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "<span class=\"screen-reader-text\">%sについての</span>コメントを残す"
+
+#: inc/template-tags.php:144
+msgid "Older posts"
+msgstr "古い投稿"
+
+#: inc/template-tags.php:145
+msgid "Newer posts"
+msgstr "新しい投稿"
+
+#: inc/template-tags.php:157
+msgid "the older post"
+msgstr "古い投稿"
+
+#: inc/template-tags.php:158
+msgid "the newer post"
+msgstr "新しい投稿"
+
+#: inc/template-tags.php:172
+msgid "Profile"
+msgstr "Profile"
+
+#: search.php:21
+msgid "Search Results for: %s"
+msgstr "検索結果: %s"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "見つかりませんでした"
+
+#: template-parts/content-none.php:21
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"申し訳ありません、検索ワードに合致する結果は見つかりませんでした。"
+"別のキーワードで検索をお試しください。"
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "お探しのものを見つけることができないようです。キーワード検索をお試しください。"
+
+#: template-parts/content-page.php:22 template-parts/content.php:57
+msgid "Pages:"
+msgstr "ページ:"
+
+#: template-parts/content-page.php:33
+#. translators: %s: Name of current post
+msgid "Edit %s"
+msgstr "%sを編集"
+
+#: template-parts/content.php:39
+msgid "(No Title)"
+msgstr "(タイトルなし)"
+
+#: template-parts/content.php:52
+#. translators: %s: Name of current post.
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%sの続きを読む<span class=\"meta-nav\">&rarr;</span>"
+
+#. Theme Name of the plugin/theme
+msgid "biwako"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/KamataRyo/biwako"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Description"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "KamataRyo"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://biwako.io/"
+msgstr ""
+
+#: comments.php:29
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo;への1件のコメント"
+msgstr[1] "&ldquo;%2$s&rdquo;への%1$s件のコメント"
+
+#: inc/customizer.php:67
+msgctxt "whether display author name on post or not"
+msgid "Yes"
+msgstr "表示"
+
+#: inc/customizer.php:68
+msgctxt "whether display author name on post or not"
+msgid "No"
+msgstr "非表示"
+
+#: inc/template-tags.php:54
+msgctxt "post-edit-link"
+msgid "Edit %s"
+msgstr "%sを編集"
+
+#: searchform.php:3 searchform.php:4
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:4
+msgctxt "placeholder"
+msgid "Search …"
+msgstr ""
+
+#: searchform.php:6
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
