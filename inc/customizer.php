@@ -164,6 +164,6 @@ add_action( 'wp_head', 'biwako_customize_css');
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function biwako_customize_preview_js() {
-	wp_enqueue_script( 'biwako_customizer', get_template_directory_uri() . '/js/biwako-customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'biwako_customizer', get_template_directory_uri() . '/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'biwako_customize_preview_js' );

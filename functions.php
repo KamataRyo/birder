@@ -121,11 +121,7 @@ function biwako_scripts() {
 
 	wp_enqueue_style( 'biwako-style', get_stylesheet_uri(), array( 'open-sans' ) );
 
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/js/lib/Genericons/genericons.css', array( 'biwako-style' ), '3.4.1' );
-
-	wp_enqueue_script( 'biwako-script', get_template_directory_uri() . '/js/index.js', array( 'jquery' ), '', true );
-
-	wp_enqueue_script( 'biwako-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
+	wp_enqueue_script( 'biwako-script', get_template_directory_uri() . '/bundle.js', array( 'jquery' ), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -140,7 +136,7 @@ add_action( 'wp_enqueue_scripts', 'biwako_scripts' );
 function biwako_customizer_live_preview() {
 	 wp_enqueue_script(
 		'biwako-themecustomizer',
-		get_template_directory_uri() . '/js/biwako-customizer.js',
+		get_template_directory_uri() . '/customizer.js',
 		array( 'jquery','customize-preview' ),
 		'',
 		true
