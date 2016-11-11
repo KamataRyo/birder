@@ -17,7 +17,7 @@
 						<?php if ( -1 !== $representative_id ): ?>
 							<div id="author-profile" class="author-profile-container">
 								<?php biwako_representative_profile( $representative_id ); ?>
-							</div>
+							</div><!--author-profile-->
 						<?php endif; ?>
 
 						<?php if ( has_nav_menu( 'footer' ) ) : ?>
@@ -30,7 +30,7 @@
 										'depth'          => 1,
 									) );
 								?>
-							</nav>
+							</nav><!--#footer-navigation-->
 						<?php endif; ?>
 
 						<?php if ( has_nav_menu( 'SNS_on_footer' ) ) : ?>
@@ -45,7 +45,7 @@
 										'link_after'      => '</span>',
 									) );
 								?>
-							</nav>
+							</nav><!--#SNS-linklist-footer-->
 						<?php endif; ?>
 
 						<div class="site-info">
@@ -60,8 +60,8 @@
 								<?php
 									printf(
 										esc_html__( 'Theme: %1$s by %2$s.', 'biwako' ),
-										'<a href="https://github.com/KamataRyo/biwako">biwako</a>',
-										'KamataRyo'
+										'<a href="https://github.com/kamataryo/biwako">biwako</a>',
+										'kamataryo'
 									);
 								?>
 							</p>

@@ -40,7 +40,10 @@ const styles = {
 }
 
 const exStyles = {
-  src: ['./node_modules/genericons/genericons/genericons.css']
+  src: [
+    './node_modules/highlight.js/styles/default.css',
+    './node_modules/genericons/genericons/genericons.css'
+  ]
 }
 
 const pots = {
